@@ -1,0 +1,32 @@
+{
+  "name": "lqm",
+  "description": "LQM",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Luong Quang Manh",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lqmanh/lqm.git"
+  },
+  "main": "pages/index.js",
+  "scripts": {
+    "clean": "rm -rf .next node_modules",
+    "dev": "next",
+    "build:content": "node content-builder.js",
+    "build": "npm run build:content && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.2",
+    "dayjs": "^1.7.8",
+    "directory-stat": "^0.4.0",
+    "front-matter": "^3.0.1",
+    "marked": "^0.5.2",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}

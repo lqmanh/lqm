@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "alias": "lqm",
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "api/**/*.js", "use": "@now/node" }
+  ]
+}
