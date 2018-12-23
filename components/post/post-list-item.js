@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import dayjs from 'dayjs'
 
+import TagList from '../tag-list'
+
 
 export default (props) => (
   <div className='card'>
@@ -18,9 +20,7 @@ export default (props) => (
       <h6 className='subtitle is-6'><em>{props.description}</em></h6>
       <div className='level'>
         <div className='level-item'>
-          <span className='tags'>{
-            props.tags.map((tag, i) => <span className='tag' key={i}>{tag}</span>)
-          }</span>
+          <TagList tags={props.tags} />
         </div>
         <span className='level-item'>{dayjs(props.publicationDate).format('dddd, DD MMMM YYYY')}</span>
       </div>

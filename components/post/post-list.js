@@ -25,7 +25,7 @@ export default class PostList extends PureComponent {
           const { title, description, headerImage, published, publicationDate, tags } = post.content
           if (published) return (
             <PostListItem key={i} slug={name} title={title} description={description}
-              headerImage={headerImage} publicationDate={publicationDate} tags={tags || []}
+              headerImage={headerImage} publicationDate={publicationDate} tags={tags}
             />
           )
         })

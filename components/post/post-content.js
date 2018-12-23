@@ -1,6 +1,8 @@
 import { PureComponent } from 'react'
 import axios from 'axios'
 
+import TagList from '../tag-list'
+
 
 export default class PostContent extends PureComponent {
   constructor(props) {
@@ -16,6 +18,11 @@ export default class PostContent extends PureComponent {
   render() {
     const content = this.state.content
     if (!content) return null
-    return <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
+    return (
+      <>
+        <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
+        <TagList tags={content.tags} />
+      </>
+    )
   }
 }
