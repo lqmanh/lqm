@@ -15,7 +15,7 @@
     "dev:api": "micro-dev api/posts/index.js",
     "build:content": "node content-builder.js",
     "build": "npm run build:content && next build",
-    "start": "next start"
+    "start": "NODE_ENV=production next start"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
