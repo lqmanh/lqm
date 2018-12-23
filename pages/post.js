@@ -6,8 +6,8 @@ import PostContent from '../components/post/post-content'
 
 export default withRouter((props) => (
   <Layout>
-    <section className='section columns is-centered'>
-      <div className='column is-6'>
+    <section className='section columns is-centered is-mobile'>
+      <div className='column is-10-mobile is-8-tablet is-6-desktop'>
         <PostContent slug={props.router.query.slug} />
       </div>
     </section>
