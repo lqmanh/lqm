@@ -1,21 +1,13 @@
-const fsModule = require('fs')
-let fs = fsModule.promises
-if (!fs) {
-  const { promisify } = require('util')
-  fs = {
-    readFile: promisify(fsModule.readFile),
-  }
-}
 const path = require('path')
 const url = require('url')
 const dayjs = require('dayjs')
 
 
-const contentDir = path.normalize('../../content')
+const contentDir = path.join(__dirname, '../../content')
 
-const getOne = async (slug) => {
+const getContentOne = (slug) => {
   try {
-    return fs.readFile(path.join(contentDir, `${slug}.json`), { encoding: 'utf8' })
+    return JSON.stringify(require(path.join(contentDir, `${slug}.json`)))
   } catch (err) {
     return ''
   }
@@ -31,12 +23,12 @@ const getAll = () => {
 }
 
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
   const { query } = url.parse(req.url, true)
   res.setHeader('Content-Type', 'application/json')
   res.setHeader('Cache-Control', 'max-age=3600')
   let body
-  if (query.slug) body = await getOne(query.slug)
+  if (query.slug) body = getContentOne(query.slug)
   else body = getAll()
   return res.end(body)
 }

@@ -12,6 +12,7 @@
   "scripts": {
     "clean": "rm -rf .next node_modules",
     "dev": "next",
+    "dev:api": "micro-dev api/posts/index.js",
     "build:content": "node content-builder.js",
     "build": "npm run build:content && next build",
     "start": "next start"
@@ -28,5 +29,9 @@
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "micro": "^9.3.3",
+    "micro-dev": "^3.0.0"
   }
 }

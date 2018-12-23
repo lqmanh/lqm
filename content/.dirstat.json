@@ -1,0 +1,46 @@
+{
+  "path": {
+    "root": "/",
+    "dir": "/home/light/Projects/lqm",
+    "base": "content",
+    "ext": "",
+    "name": "content"
+  },
+  "children": [
+    {
+      "path": {
+        "root": "/",
+        "dir": "/home/light/Projects/lqm/content",
+        "base": "lorem.md",
+        "ext": ".md",
+        "name": "lorem"
+      },
+      "content": {
+        "title": "Lorem Ipsum Dolor Sit Amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "published": true,
+        "publicationDate": "2018-12-19T00:00:00.000Z",
+        "tags": [
+          "lorem",
+          "ipsum",
+          "dolor"
+        ]
+      }
+    },
+    {
+      "path": {
+        "root": "/",
+        "dir": "/home/light/Projects/lqm/content",
+        "base": "zombie.md",
+        "ext": ".md",
+        "name": "zombie"
+      },
+      "content": {
+        "title": "Zombies Reversus Ab Inferno",
+        "description": "Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis.",
+        "published": true,
+        "publicationDate": "2018-12-20T00:00:00.000Z"
+      }
+    }
+  ]
+}
