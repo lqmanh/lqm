@@ -1,11 +1,15 @@
 ---
 title: Lorem Ipsum Dolor Sit Amet
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+headerImage: /static/lorem.jpg
 published: true
 publicationDate: 2018-12-19
 tags: [lorem, ipsum, dolor]
 ---
 # Lorem Ipsum Dolor Sit Amet
+
+![Header Image](/static/lorem.jpg)
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer quis auctor elit sed vulputate. Blandit turpis cursus in hac habitasse platea dictumst quisque sagittis. Augue interdum velit euismod in pellentesque massa placerat. At quis risus sed vulputate odio ut enim blandit. Venenatis tellus in metus vulputate eu scelerisque. Odio facilisis mauris sit amet massa vitae tortor. Erat imperdiet sed euismod nisi porta. A lacus vestibulum sed arcu non. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Ullamcorper a lacus vestibulum sed. Egestas maecenas pharetra convallis posuere. Sed tempus urna et pharetra pharetra massa massa ultricies mi. Bibendum neque egestas congue quisque egestas. Eget felis eget nunc lobortis mattis aliquam. Nec ultrices dui sapien eget mi.
 
 Erat pellentesque adipiscing commodo elit at imperdiet dui. Massa sed elementum tempus egestas sed sed risus pretium quam. Amet cursus sit amet dictum sit. Dignissim enim sit amet venenatis urna cursus eget. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Dictumst quisque sagittis purus sit amet. Morbi quis commodo odio aenean sed. Nec ullamcorper sit amet risus nullam. Id faucibus nisl tincidunt eget nullam. Diam phasellus vestibulum lorem sed risus ultricies. Nibh tortor id aliquet lectus proin nibh. Velit aliquet sagittis id consectetur. Massa sed elementum tempus egestas sed sed risus pretium. Fusce id velit ut tortor. Praesent semper feugiat nibh sed pulvinar proin gravida.

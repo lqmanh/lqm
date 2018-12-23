@@ -3,6 +3,8 @@
   "alias": "lqm",
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
-    { "src": "api/**/*.js", "use": "@now/node" }
+    { "src": "api/**/*.js", "use": "@now/node" },
+    { "src": "static/**/*.png", "use": "@now/optipng" },
+    { "src": "static/**/*.jpg", "use": "@now/static" }
   ]
 }
