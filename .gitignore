@@ -78,3 +78,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Blog posts build output
+content/*.json
+content/.dirstat.json

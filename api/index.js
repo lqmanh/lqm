@@ -1,1 +1,1 @@
-module.exports = (req, res) => res.end('Welcome to my API')
+module.exports = (req, res) => res.end('Welcome to LQM API')

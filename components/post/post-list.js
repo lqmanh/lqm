@@ -22,7 +22,7 @@ export default class PostList extends PureComponent {
       <>{
         posts.map((post, i) => {
           const { name } = post.path
-          const { title, description, headerImage, published, publicationDate, tags } = post.content
+          const { title, description, headerImage, published, publicationDate, tags } = post.meta
           if (published) return (
             <PostListItem key={i} slug={name} title={title} description={description}
               headerImage={headerImage} publicationDate={publicationDate} tags={tags}

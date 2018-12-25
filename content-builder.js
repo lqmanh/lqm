@@ -8,28 +8,25 @@ if (!fs) {
   }
 }
 const path = require('path')
-const directoryStat = require('directory-stat')
+const { StatWriter } = require('directory-stat')
+const { StatCollector } = require('directory-stat/stat-collectors')
 const marked = require('marked')
 const fm = require('front-matter')
 
 
-const StatCollector = directoryStat.StatCollectors.StatCollector
-const StatWriter = directoryStat.StatWriter
-
-class BlogPostCollector extends StatCollector {
+class BlogPostMetaCollector extends StatCollector {
   constructor() {
-    super('content')
+    super('meta')
   }
 
   async collect(pathStr, stat) {
     if (!stat.isFile()) return undefined
     if (path.extname(pathStr).toLowerCase() !== '.md') return undefined
 
-    const content = await fs.readFile(pathStr, { encoding: 'utf8' })
-    const result = fm(content)
+    const { attributes: meta, body } = fm(await fs.readFile(pathStr, { encoding: 'utf8' }))
 
     // side effect: convert .md to .json
-    const bodyHtml = marked(result.body, {
+    const bodyHtml = marked(body, {
       gfm: true,
       breaks: true,
       smartLists: true,
@@ -40,13 +37,13 @@ class BlogPostCollector extends StatCollector {
     try {
       fs.writeFile(
         path.join(dir, `${name}.json`),
-        JSON.stringify({ bodyHtml, ...result.attributes }),
+        JSON.stringify({ bodyHtml, ...meta }),
       )
     } catch (err) {
       console.error('Error while converting .md to .json')
     }
 
-    return result.attributes
+    return meta
   }
 }
 
@@ -55,9 +52,9 @@ try {
     depth: 1,
     exclude: ['.dirstat.json', '*.json'],
     output: '.dirstat.json',
-    statCollectors: [new BlogPostCollector()]
+    statCollectors: [new BlogPostMetaCollector()]
   })
   sw.export()
 } catch (err) {
-  console.error('Failed to build content!')
+  console.error('Failed to build content')
 }
