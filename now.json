@@ -6,5 +6,8 @@
     { "src": "api/**/*.js", "use": "@now/node" },
     { "src": "static/**/*.png", "use": "@now/optipng" },
     { "src": "static/**/*.jpg", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "^/posts/([^/]+)", "dest": "/post?slug=$1" }
   ]
 }
