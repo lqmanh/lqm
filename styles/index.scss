@@ -1,6 +1,5 @@
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
 @import url('https://fonts.googleapis.com/css?family=Asap:400,400i,700,700i&subset=vietnamese');
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
 
 $family-sans-serif: 'Asap', sans-serif;
 $link: $red;
@@ -17,7 +16,7 @@ $footer-padding: 3rem 1.5rem 3rem;
 @import "../node_modules/bulma/bulma.sass";
 
 .card {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 .card:not(:last-child) {
   margin-bottom: 1.5rem;
