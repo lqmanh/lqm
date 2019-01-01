@@ -27,18 +27,10 @@ export default class TopBar extends PureComponent {
           {/* <div className="navbar-start">
             <Link prefetch href='/about'><a className="navbar-item">About</a></Link>
           </div> */}
-          <div className="navbar-end">
-            <div className='navbar-item'>
-              <span className='quote'>&ldquo;Có làm được hay không không quan trọng. Quan trọng là bạn có làm hay không.&rdquo;</span>
-            </div>
-          </div>
         </div>
         <style jsx>{`
           .title {
             font-family: 'Major Mono Display', monospace;
-          }
-          .quote {
-            font-family: 'Kalam', cursive;
           }
         `}</style>
       </nav>
