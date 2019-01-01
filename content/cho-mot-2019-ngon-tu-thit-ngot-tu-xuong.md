@@ -1,12 +1,12 @@
 ---
-title: Để Một 2019 Ngon Từ Thịt, Ngọt Từ Xương
+title: Cho Một 2019 Ngon Từ Thịt, Ngọt Từ Xương
 description: Và đây, 2019 là năm đầu tiên tôi chịu ngồi viết new year resolutions như thế này. Không quá dài, không quá ngắn, không quá khó, không quá dễ. Đơn giản chỉ là những điều mà tôi trăn trở và muốn thực hiện nhất. Tự hứa với bản thân sẽ theo dõi và cập nhật thường xuyên chứ không vứt xó cái danh sách này!
 headerImage: /static/de-mot-2019-ngon-tu-thit-ngot-tu-xuong.jpg
 published: true
 publicationDate: 2019-01-01
 tags: [resolution]
 ---
-# Để Một 2019 Ngon Từ Thịt, Ngọt Từ Xương
+# Cho Một 2019 Ngon Từ Thịt, Ngọt Từ Xương
 
 ![Header Image](/static/de-mot-2019-ngon-tu-thit-ngot-tu-xuong.jpg)
 
