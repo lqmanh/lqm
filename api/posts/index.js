@@ -1,20 +1,17 @@
-const fsModule = require('fs')
-let fs = fsModule.promises
-if (!fs) {
-  const { promisify } = require('util')
-  fs = {
-    readFile: promisify(fsModule.readFile),
-  }
-}
 const path = require('path')
 const url = require('url')
-const dayjs = require('dayjs')
 
 
 const contentDir = path.join(__dirname, '../../content')
 
 const getContentOne = async (slug) => {
   try {
+    const fsModule = require('fs')
+    let fs = fsModule.promises
+    if (!fs) {
+      const { promisify } = require('util')
+      fs = { readFile: promisify(fsModule.readFile) }
+    }
     return fs.readFile(path.join(contentDir, `${slug}.json`), { encoding: 'utf8' })
   } catch (err) {
     return ''
@@ -22,9 +19,10 @@ const getContentOne = async (slug) => {
 }
 
 const getAll = () => {
+  const dayjs = require('dayjs')
   const posts = require(path.join(contentDir, '.dirstat.json')).children
   posts.sort((a, b) => {
-    if (dayjs(b.content.publicationDate).isAfter(dayjs(a.content.publicationDate))) return 1
+    if (dayjs(b.meta.publicationDate).isAfter(dayjs(a.meta.publicationDate))) return 1
     return -1
   })
   return JSON.stringify(posts)

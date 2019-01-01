@@ -29,8 +29,7 @@ export default class TopBar extends PureComponent {
           </div> */}
           <div className="navbar-end">
             <div className='navbar-item'>
-              <span className='quote'>&ldquo;Writing is the paiting of the voice.&rdquo;</span>
-              <span>&nbsp;&ndash; Voltaire</span>
+              <span className='quote'>&ldquo;Có làm được hay không không quan trọng. Quan trọng là bạn có làm hay không.&rdquo;</span>
             </div>
           </div>
         </div>
