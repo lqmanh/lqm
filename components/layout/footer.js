@@ -3,7 +3,7 @@ export default (props) => (
     <div className='content has-text-centered'>
       <p>
         Copyright &copy; 2018&nbsp;
-        <a href='https://lqmanh.now.sh/'>Luong Quang Manh</a>
+        <a href='https://cvitae.now.sh/'>Luong Quang Manh</a>
         . All rights reserved.
         <br />
         The source code is licensed under&nbsp;
