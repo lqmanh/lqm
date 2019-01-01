@@ -28,6 +28,10 @@ export default (props) => (
       </div>
     </div>
     <style jsx>{`
+      img {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
       .level-item:not(.is-narrow) {
         flex-grow: 0;
       }
