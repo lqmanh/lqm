@@ -15,7 +15,7 @@ export default class TopBar extends PureComponent {
       <nav className="navbar has-shadow is-white">
         <div className="navbar-brand">
           <Link prefetch href='/'><a className="navbar-item">
-            <h4 className='title is-4'>lqm</h4>
+            <h4 className='title is-4'>LQM</h4>
           </a></Link>
           <a className={`navbar-burger ${this.state.burgerActive ? 'is-active' : ''}`} onClick={this.toggleBurger}>
             <span></span>
@@ -24,23 +24,12 @@ export default class TopBar extends PureComponent {
           </a>
         </div>
         <div className={`navbar-menu ${this.state.burgerActive ? 'is-active' : ''}`}>
-          {/* <div className="navbar-start">
-            <Link prefetch href='/about'><a className="navbar-item">About</a></Link>
-          </div> */}
           <div className="navbar-end">
-            <div className='navbar-item'>
-              <span className='quote'>&ldquo;Có làm được hay không không quan trọng. Quan trọng là bạn có làm hay không.&rdquo;</span>
-            </div>
+            <a className='navbar-item'>
+              <ion-icon name="options" />
+            </a>
           </div>
         </div>
-        <style jsx>{`
-          .title {
-            font-family: 'Major Mono Display', monospace;
-          }
-          .quote {
-            font-family: 'Kalam', cursive;
-          }
-        `}</style>
       </nav>
     )
   }

@@ -1,28 +1,26 @@
-import { PureComponent } from 'react'
-import axios from 'axios'
+import Head from 'next/head'
 
-import TagList from '../tag-list'
+import PostMeta from '../post-meta'
+import Share from '../share'
 
 
-export default class PostContent extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = { content: null }
-  }
-
-  async componentDidMount() {
-    const res = await axios.get(`/api/posts?slug=${this.props.slug}`)
-    this.setState({ content: res.data })
-  }
-
-  render() {
-    const content = this.state.content
-    if (!content) return null
-    return (
-      <>
-        <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
-        <TagList tags={content.tags} />
-      </>
-    )
-  }
+export default (props) => {
+  const content = require(`../../content/${props.slug}.json`)
+  const origin = 'https://lqm.now.sh'
+  const url = `${origin}/posts/${props.slug}`
+  return (
+    <>
+      <Head>
+        <title>{content.title} &ndash; LQM</title>
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={content.title} />
+        <meta property="og:description" content={content.description} />
+        <meta property="og:image" content={`${origin}${content.headerImage}`} />
+      </Head>
+      <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
+      <PostMeta tags={content.tags} publicationDate={content.publicationDate} />
+      <Share url={url} />
+    </>
+  )
 }
