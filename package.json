@@ -10,16 +10,16 @@
   },
   "main": "pages/index.js",
   "scripts": {
-    "clean": "rm -rf .next node_modules",
+    "clean": "rm -rf .next dist node_modules",
     "dev": "next",
-    "dev:api": "micro-dev api/posts/index.js",
     "build:content": "node content-builder.js",
     "build": "npm run build:content && next build",
+    "export": "npm run build && next export -o dist",
+    "now-build": "npm run export",
     "start": "next start"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "axios": "^0.18.0",
     "bulma": "^0.7.2",
     "dayjs": "^1.7.8",
     "directory-stat": "^0.5.1",
@@ -29,9 +29,5 @@
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
-  },
-  "devDependencies": {
-    "micro": "^9.3.3",
-    "micro-dev": "^3.0.0"
   }
 }

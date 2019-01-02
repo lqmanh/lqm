@@ -15,7 +15,7 @@ export default (props) => (
     ) : null}
     <div className='card-content'>
       <h4 className='title is-4'>
-        <Link prefetch href={`/post?slug=${props.slug}`} as={`/posts/${props.slug}`}>
+        <Link prefetch href={`/posts/${props.slug}`}>
           <a>{props.title}</a>
         </Link>
       </h4>

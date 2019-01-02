@@ -1,35 +1,25 @@
-import { PureComponent } from 'react'
-import axios from 'axios'
+import dayjs from 'dayjs'
 
 import PostListItem from './post-list-item'
 
 
-export default class PostList extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = { posts: [] }
-  }
-
-  async componentDidMount() {
-    const res = await axios.get('/api/posts')
-    this.setState({ posts: res.data })
-  }
-
-  render() {
-    const posts = this.state.posts
-    if (!posts) return null
-    return (
-      <>{
-        posts.map((post, i) => {
-          const { name } = post.path
-          const { title, description, headerImage, published, publicationDate, tags } = post.meta
-          if (published) return (
-            <PostListItem key={i} slug={name} title={title} description={description}
-              headerImage={headerImage} publicationDate={publicationDate} tags={tags}
-            />
-          )
-        })
-      }</>
-    )
-  }
+export default (props) => {
+  const posts = require('../../content/.dirstat.json').children
+  posts.sort((a, b) => {
+    if (dayjs(b.meta.publicationDate).isAfter(dayjs(a.meta.publicationDate))) return 1
+    return -1
+  })
+  return (
+    <>{
+      posts.map((post, i) => {
+        const { name } = post.path
+        const { title, description, headerImage, published, publicationDate, tags } = post.meta
+        if (published) return (
+          <PostListItem key={i} slug={name} title={title} description={description}
+            headerImage={headerImage} publicationDate={publicationDate} tags={tags}
+          />
+        )
+      })
+    }</>
+  )
 }

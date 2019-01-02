@@ -2,12 +2,8 @@
   "version": 2,
   "alias": "lqm",
   "builds": [
-    { "src": "next.config.js", "use": "@now/next" },
-    { "src": "api/**/*.js", "use": "@now/node" },
+    { "src": "package.json", "use": "@now/static-build" },
     { "src": "static/**/*.png", "use": "@now/optipng" },
     { "src": "static/**/*.jpg", "use": "@now/static" }
-  ],
-  "routes": [
-    { "src": "^/posts/([^/]+)", "dest": "/post?slug=$1" }
   ]
 }

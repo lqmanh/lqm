@@ -7,9 +7,23 @@ const { PHASE_PRODUCTION_SERVER } =
 
 
 module.exports = (phase, { defaultConfig }) => {
-  if (phase === PHASE_PRODUCTION_SERVER) {
-    return {}
+  const configs = {
+    exportPathMap: async (defaultPathMap) => {
+      const posts = require('./content/.dirstat.json').children
+      const pathMap = {
+        '/': { page: '/' },
+      }
+      for (const post of posts) {
+        pathMap[`/posts/${post.path.name}`] = {
+          page: '/post',
+          query: { slug: post.path.name }
+        }
+      }
+      return pathMap
+    }
   }
+
+  if (phase === PHASE_PRODUCTION_SERVER) return configs
   const withSass = require('@zeit/next-sass')
-  return withSass()
+  return withSass(configs)
 }

@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
         <Head />
         <body>
           <Main />
