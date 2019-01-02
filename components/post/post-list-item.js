@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import dayjs from 'dayjs'
 
-import TagList from '../tag-list'
+import PostMeta from '../post-meta'
 
 
 export default (props) => (
@@ -15,21 +14,17 @@ export default (props) => (
     ) : null}
     <div className='card-content'>
       <h4 className='title is-4'>
-        <Link prefetch href={`/post?slug=${props.slug}`} as={`/posts/${props.slug}`}>
+        <Link prefetch href={`/posts/${props.slug}`}>
           <a>{props.title}</a>
         </Link>
       </h4>
       <h6 className='subtitle is-6'><em>{props.description}</em></h6>
-      <div className='level'>
-        <div className='level-item'>
-          <TagList tags={props.tags} />
-        </div>
-        <span className='level-item'>{dayjs(props.publicationDate).format('dddd, DD MMMM YYYY')}</span>
-      </div>
+      <PostMeta tags={props.tags} publicationDate={props.publicationDate} />
     </div>
     <style jsx>{`
-      .level-item:not(.is-narrow) {
-        flex-grow: 0;
+      img {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
       }
     `}</style>
   </div>
