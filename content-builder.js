@@ -51,6 +51,7 @@ try {
   const sw = new StatWriter(path.join(__dirname, 'content'), {
     depth: 1,
     exclude: ['.dirstat.json', '*.json'],
+    minified: true,
     output: '.dirstat.json',
     statCollectors: [new BlogPostMetaCollector()]
   })
