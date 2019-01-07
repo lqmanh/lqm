@@ -19,12 +19,6 @@ body {
   background-color: $white-bis;
 }
 
-.card {
-  border-radius: 0.5rem;
-}
-.card:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
 .card:hover {
   box-shadow: 0 4px 8px rgba($grey-darker, 0.1);
 }
