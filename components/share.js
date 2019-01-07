@@ -13,7 +13,7 @@ export default (props) => (
       </TwitterShareButton>
     </div>
     <style jsx>{`
-      :not(:last-child) {
+      span, .share-button:not(:last-child) {
         margin-right: 0.5rem;
       }
       .share-button {
