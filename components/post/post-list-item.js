@@ -2,12 +2,11 @@ import Link from 'next/link'
 
 import PostMeta from '../post-meta'
 
-
 export default (props) => (
   <div className='card'>
     {props.headerImage ? (
-      <div class="card-image">
-        <figure class="image is-4by3">
+      <div className='card-image'>
+        <figure className='image is-4by3'>
           <img src={props.headerImage} />
         </figure>
       </div>
@@ -18,7 +17,9 @@ export default (props) => (
           <a>{props.title}</a>
         </Link>
       </h4>
-      <h6 className='subtitle is-6'><em>{props.description}</em></h6>
+      <h6 className='subtitle is-6'>
+        <em>{props.description}</em>
+      </h6>
       <PostMeta tags={props.tags} publicationDate={props.publicationDate} />
     </div>
     <style jsx>{`

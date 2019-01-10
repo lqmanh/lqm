@@ -4,7 +4,7 @@ if (!fs) {
   const { promisify } = require('util')
   fs = {
     readFile: promisify(fsModule.readFile),
-    writeFile: promisify(fsModule.writeFile),
+    writeFile: promisify(fsModule.writeFile)
   }
 }
 const path = require('path')
@@ -12,7 +12,6 @@ const { StatWriter } = require('directory-stat')
 const { StatCollector } = require('directory-stat/stat-collectors')
 const marked = require('marked')
 const fm = require('front-matter')
-
 
 class BlogPostMetaCollector extends StatCollector {
   constructor() {
@@ -23,7 +22,9 @@ class BlogPostMetaCollector extends StatCollector {
     if (!stat.isFile()) return undefined
     if (path.extname(pathStr).toLowerCase() !== '.md') return undefined
 
-    const { attributes: meta, body } = fm(await fs.readFile(pathStr, { encoding: 'utf8' }))
+    const { attributes: meta, body } = fm(
+      await fs.readFile(pathStr, { encoding: 'utf8' })
+    )
 
     // side effect: convert .md to .json
     const bodyHtml = marked(body, {
@@ -31,13 +32,13 @@ class BlogPostMetaCollector extends StatCollector {
       breaks: true,
       smartLists: true,
       smartypants: true,
-      xhtml: true,
+      xhtml: true
     })
     const { dir, name } = path.parse(pathStr)
     try {
       fs.writeFile(
         path.join(dir, `${name}.json`),
-        JSON.stringify({ bodyHtml, ...meta }),
+        JSON.stringify({ bodyHtml, ...meta })
       )
     } catch (err) {
       console.error('Error while converting .md to .json')
