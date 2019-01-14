@@ -4,7 +4,7 @@ import PostMeta from '../post-meta'
 import Share from '../share'
 
 export default (props) => {
-  const content = import(`../../content/${props.slug}.json`)
+  const content = require(`../../content/${props.slug}.json`)
   const origin = 'https://lqm.now.sh'
   const url = `${origin}/posts/${props.slug}`
   return (

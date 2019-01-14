@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import PostListItem from './post-list-item'
 
 export default () => {
-  const posts = import('../../content/.dirstat.json').children
+  const posts = require('../../content/.dirstat.json').children
   posts.sort((a, b) => {
     if (dayjs(b.meta.publicationDate).isAfter(dayjs(a.meta.publicationDate)))
       return 1
