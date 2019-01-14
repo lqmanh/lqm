@@ -6,7 +6,7 @@ export default (props) => (
   <div className='card'>
     {props.headerImage ? (
       <div className='card-image'>
-        <figure className='image is-4by3'>
+        <figure className='image'>
           <img src={props.headerImage} />
         </figure>
       </div>
@@ -32,6 +32,8 @@ export default (props) => (
       img {
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
+        max-height: 50vh;
+        object-fit: cover;
       }
     `}</style>
   </div>
