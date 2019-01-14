@@ -1,5 +1,9 @@
-import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share'
-
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon
+} from 'react-share'
 
 export default (props) => (
   <>
@@ -13,7 +17,8 @@ export default (props) => (
       </TwitterShareButton>
     </div>
     <style jsx>{`
-      span, .share-button:not(:last-child) {
+      span,
+      .share-button:not(:last-child) {
         margin-right: 0.5rem;
       }
       .share-button {

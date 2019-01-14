@@ -1,6 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -9,12 +8,15 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+      <html lang='vi' prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#'>
         <Head />
         <body>
           <Main />
           <NextScript />
-          <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js" />
+          <script
+            async
+            src='https://unpkg.com/ionicons@4.5.0/dist/ionicons.js'
+          />
         </body>
       </html>
     )
