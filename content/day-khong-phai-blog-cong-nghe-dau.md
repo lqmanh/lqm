@@ -6,15 +6,16 @@ published: true
 publicationDate: 2019-01-06
 tags: []
 ---
+
 # Đây Không Phải Blog Công Nghệ Đâu
 
-Đãng lẽ bài này phải được đăng đầu tiên cơ, chứ không phải [*Cho Một 2019 Ngon Từ Thịt, Ngọt Từ Xương*](/posts/cho-mot-2019-ngon-tu-thit-ngot-tu-xuong) đâu. Nhưng mình đã thực sự muốn viết ra đống new year resolutions ấy ngay lập tức, vào chính ngày đầu tiên của năm mới, kể cả khi trang web vẫn còn khá lôi thôi.
+Đãng lẽ bài này phải được đăng đầu tiên cơ, chứ không phải [_Cho Một 2019 Ngon Từ Thịt, Ngọt Từ Xương_](/posts/cho-mot-2019-ngon-tu-thit-ngot-tu-xuong) đâu. Nhưng mình đã thực sự muốn viết ra đống new year resolutions ấy ngay lập tức, vào chính ngày đầu tiên của năm mới, kể cả khi trang web vẫn còn khá lôi thôi.
 
-Nhưng không sao! Hôm nay cũng là một ngày tuyệt vời khác để *khai trương* LQM - blog cá nhân của mình. Trong bài viết này, mình sẽ giới thiệu với các bạn đôi nét về những gì mình sẽ viết ở đây, cũng như nguồn cơn cho tất cả những chuyện này.
+Nhưng không sao! Hôm nay cũng là một ngày tuyệt vời khác để _khai trương_ LQM - blog cá nhân của mình. Trong bài viết này, mình sẽ giới thiệu với các bạn đôi nét về những gì mình sẽ viết ở đây, cũng như nguồn cơn cho tất cả những chuyện này.
 
 ![Header Image](/static/day-khong-phai-blog-cong-nghe-dau.jpg)
 
-Đầu tiên, xin chào tất cả mọi người! Mình là Lương Quang Mạnh. Hiện mình đang là một sinh viên, nhưng sẽ trở thành một lập trình viên *phun-xờ-tách* trong một tương lai không xa.
+Đầu tiên, xin chào tất cả mọi người! Mình là Lương Quang Mạnh. Hiện mình đang là một sinh viên, nhưng sẽ trở thành một lập trình viên _phun-xờ-tách_ trong một tương lai không xa.
 
 Nguyên nhân sâu xa nhất thôi thúc mình bắt đầu thói quen viết blog đơn giản vì mình thích viết. Viết những điều không thể nói thành lời. Một mặt, mình muốn chia sẻ sở thích, sở ghét, quan điểm, cũng như một vài hướng dẫn, gợi ý thú vị đến mọi người. Còn web app này ư? Lý do cũng cực kì đơn giản: mình chưa tìm được một dịch vụ đủ tốt và phù hợp với nhu cầu của bản thân. Và thế là mình bắt tay vào xây dựng blog này từ đầu chí cuối luôn!
 
