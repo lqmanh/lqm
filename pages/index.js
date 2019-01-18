@@ -3,8 +3,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import PostList from '../components/post/post-list'
 
-
-export default (props) => (
+export default () => (
   <>
     <Head>
       <title>LQM</title>
