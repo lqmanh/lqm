@@ -1,7 +1,7 @@
 {
   "name": "lqm",
   "description": "LQM",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
   "author": "Luong Quang Manh",
   "repository": {
@@ -24,12 +24,12 @@
     "dayjs": "^1.7.8",
     "directory-stat": "^0.5.1",
     "front-matter": "^3.0.1",
-    "marked": "^0.5.2",
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-share": "^2.4.0"
+    "react-share": "^2.4.0",
+    "showdown": "^1.9.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

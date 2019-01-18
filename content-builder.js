@@ -10,7 +10,7 @@ if (!fs) {
 const path = require('path')
 const { StatWriter } = require('directory-stat')
 const { StatCollector } = require('directory-stat/stat-collectors')
-const marked = require('marked')
+const Converter = require('showdown').Converter
 const fm = require('front-matter')
 
 class BlogPostMetaCollector extends StatCollector {
@@ -27,13 +27,22 @@ class BlogPostMetaCollector extends StatCollector {
     )
 
     // side effect: convert .md to .json
-    const bodyHtml = marked(body, {
-      gfm: true,
-      breaks: true,
-      smartLists: true,
-      smartypants: true,
-      xhtml: true
+    const converter = new Converter({
+      omitExtraWLInCodeBlocks: true,
+      ghCompatibleHeaderId: true,
+      simplifiedAutoLink: true,
+      literalMidWordUnderscores: true,
+      strikethrough: true,
+      tables: true,
+      tasklists: true,
+      smartIndentationFix: true,
+      disableForced4SpacesIndentedSublists: true,
+      simpleLineBreaks: true,
+      requireSpaceBeforeHeadingText: true,
+      openLinksInNewWindow: true,
+      emoji: true
     })
+    const bodyHtml = converter.makeHtml(body)
     const { dir, name } = path.parse(pathStr)
     try {
       fs.writeFile(
