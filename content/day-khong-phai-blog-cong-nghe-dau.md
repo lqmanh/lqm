@@ -25,6 +25,6 @@ Nếu yêu thích các bài viết của mình, đừng ngần ngại share chú
 
 Nếu có bất kì ý kiến đóng góp nào cho LQM, hãy gửi email về cho mình theo địa chỉ: luongquangmanh85@gmail.com
 
-Cảm ơn tất cả các bạn và hẹn gặp lại trong bài viết kế tiếp - review một trong những tác phẩm yêu thích nhất của mình!
+Cảm ơn tất cả các bạn và hẹn gặp lại trong bài viết kế tiếp!
 
 P/S: Toàn bộ source code của web app và bài viết được quản lý bởi [Github](https://github.com/lqmanh/lqm) và deployed trên [Zeit Now](https://zeit.co/).
