@@ -1,9 +1,4 @@
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon
-} from 'react-share'
+import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share'
 
 export default (props) => (
   <>

@@ -13,10 +13,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script
-            async
-            src='https://unpkg.com/ionicons@4.5.0/dist/ionicons.js'
-          />
+          <script async src='https://unpkg.com/ionicons@4.5.0/dist/ionicons.js' />
         </body>
       </html>
     )
