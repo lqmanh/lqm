@@ -23,12 +23,6 @@ export default (props) => (
       <PostMeta tags={props.tags} publicationDate={props.publicationDate} />
     </div>
     <style jsx>{`
-      .card {
-        border-radius: 0.5rem;
-      }
-      .card:not(:last-child) {
-        margin-bottom: 3rem;
-      }
       img {
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
