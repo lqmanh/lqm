@@ -18,22 +18,13 @@ export default class TopBar extends PureComponent {
               <h4 className='title is-4'>LQM</h4>
             </a>
           </Link>
-          <a
-            className={`navbar-burger ${
-              this.state.burgerActive ? 'is-active' : ''
-            }`}
-            onClick={this.toggleBurger}
-          >
+          <a className={`navbar-burger ${this.state.burgerActive ? 'is-active' : ''}`} onClick={this.toggleBurger}>
             <span />
             <span />
             <span />
           </a>
         </div>
-        <div
-          className={`navbar-menu ${
-            this.state.burgerActive ? 'is-active' : ''
-          }`}
-        >
+        <div className={`navbar-menu ${this.state.burgerActive ? 'is-active' : ''}`}>
           <div className='navbar-end'>
             <a className='navbar-item'>
               <ion-icon name='options' />
