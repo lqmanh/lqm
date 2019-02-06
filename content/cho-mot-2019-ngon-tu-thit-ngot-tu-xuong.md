@@ -4,6 +4,7 @@ description: Và đây, 2019 là năm đầu tiên mình chịu ngồi viết ne
 headerImage: /static/cho-mot-2019-ngon-tu-thit-ngot-tu-xuong.jpg
 published: true
 publicationDate: 2019-01-01
+lastUpdatedDate: 2019-02-06
 tags: [resolution]
 ---
 
@@ -38,6 +39,7 @@ Và đây, 2019 là năm đầu tiên mình chịu ngồi viết new year resolu
 1. The Girl on the Train _(ôi xin người đọc nốt cho con quyển này!)_
 2. The Pragmatic Programmer
 3. The Mythical Man-Month
+4. ~~Phía Sau Nghi Can X~~
 
 ### Nơi cần đến
 
