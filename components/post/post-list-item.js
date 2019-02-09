@@ -20,7 +20,7 @@ export default (props) => (
       <h6 className='subtitle is-6'>
         <em>{props.description}</em>
       </h6>
-      <PostMeta tags={props.tags} publicationDate={props.publicationDate} />
+      <PostMeta tags={props.tags} publicationDate={props.publicationDate} lastUpdatedDate={props.lastUpdatedDate} />
     </div>
     <style jsx>{`
       img {

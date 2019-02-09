@@ -12,7 +12,7 @@ export default () => {
     <>
       {posts.map((post, i) => {
         const { name } = post.path
-        const { title, description, headerImage, published, publicationDate, tags } = post.meta
+        const { title, description, headerImage, published, publicationDate, lastUpdatedDate, tags } = post.meta
         if (published)
           return (
             <PostListItem
@@ -22,6 +22,7 @@ export default () => {
               description={description}
               headerImage={headerImage}
               publicationDate={publicationDate}
+              lastUpdatedDate={lastUpdatedDate}
               tags={tags}
             />
           )
