@@ -23,7 +23,7 @@ Một lưu ý nhỏ, đó là bài viết sẽ đề cập khá nhiều nội du
 
 ![](/static/vi-tinh-yeu-con-nguoi-ta-co-the-di-xa-den-dau-phia-sau-nghi-can-x-2.jpg)
 
-Đây là tiểu thuyết đầu tiên của Higashino Keigo mà mình có cơ hội cầm trên tay. Cũng là một trong những tác phẩm nổi tiếng nhất của ông. Sự nổi tiếng ấy hoàn toàn có cơ sở.
+Đây là cuốn tiểu thuyết đầu tiên của Higashino Keigo mà mình có cơ hội cầm trên tay. Cũng là một trong những tác phẩm nổi tiếng nhất của ông. Sự nổi tiếng ấy hoàn toàn có cơ sở.
 
 Khác với nhiều tiểu thuyết trinh thám khác, tác phẩm mang một cốt truyện không quá phức tạp, mà chậm rãi, đều đều đôi khi đến sốt ruột. Thực tế, phải nói rằng, quá trình điều tra luẩn quẩn phát sợ. Tình tiết nhẹ nhàng, ít biến cố lớn. Dẫu vậy, những điều ấy, cộng cả việc thiếu vắng những pha hành động nghẹt thở cũng không thể làm sức hút của câu chuyện giảm sút. Cú plot twist cuối truyện càng khẳng định một cách rõ ràng: Higashino Keigo có cách thức của riêng mình để làm nên một kiệt tác.
 
@@ -57,7 +57,7 @@ Trên đây là những nội dung chính mà cuốn sách muốn gửi gắm đ
 
 ---
 
-Rồi, đó là tất cả những gì mình muốn nói về cuốn sách. Còn lại, tốt hơn hết là các bạn hãy tự đắm mình vào trang sách để trực tiếp cảm nhận. Còn bây giờ, mình sẽ dành vài dòng để nhận xét và so sánh ba bộ phim được chuyển thể từ tiểu thuyết này.
+Rồi, đó là tất cả những gì mình muốn nói về cuốn sách. Còn lại, tốt hơn hết là các bạn hãy tự đắm mình vào trang sách để trực tiếp cảm nhận. Còn bây giờ, mình sẽ dành ra vài dòng để nhận xét và so sánh ba bộ phim được chuyển thể từ tiểu thuyết này.
 
 Bộ phim đầu tiên được Nhật Bản sản xuất năm 2008. Bản này bám khá sát nguyên tác. Dù tất nhiên đã bị lược bỏ một số tình tiết và thay đổi cái kết. Theo mình, đây là bản tốt nhất và đem lại nhiều cảm xúc nhất.
 
@@ -67,4 +67,4 @@ Cuối cùng là bộ phim ra mắt năm 2017 của Trung Quốc. Có những ch
 
 ---
 
-Đến phần chấm điểm rồi! Về cuốn sách, mình đánh giá **8.0** điểm. Còn ba bộ phim của Nhật, Hàn và Trung mình sẽ cho điểm lần lượt là **6.0**, **5.0** và **5.5**.
+Đến đây là hết rồi. Cảm ơn các bạn đã kiên nhẫn đọc hết bài viết này của mình và hẹn gặp lại!
