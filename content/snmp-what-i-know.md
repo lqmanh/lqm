@@ -1,6 +1,6 @@
 ---
 title: SNMP - What I Know
-description: Things I know about Simple Network Management Protocol (SNMP).
+description: Một vài ghi chép về Giao thức Quản lý Mạng Đơn giản - Simple Network Management Protocol (SNMP), cho một dự án cá nhân ngắn hạn về quản lý tài nguyên hệ thống mạng.
 published: true
 publicationDate: 2019-01-18
 tags: [wik, snmp]

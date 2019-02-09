@@ -1,6 +1,6 @@
 ---
 title: Đây Không Phải Blog Công Nghệ Đâu
-description: Nhưng không sao! Hôm nay cũng là một ngày tuyệt vời khác để *khai trương* LQM - blog cá nhân của mình. Trong bài viết này, mình sẽ giới thiệu với các bạn đôi nét về những gì mình sẽ viết ở đây, cũng như nguồn cơn cho tất cả những chuyện này.
+description: Nhưng không sao! Hôm nay cũng là một ngày tuyệt vời khác để khai trương LQM - blog cá nhân của mình. Trong bài viết này, mình sẽ giới thiệu với các bạn đôi nét về những gì mình sẽ viết ở đây, cũng như nguồn cơn cho tất cả những chuyện này.
 headerImage: /static/day-khong-phai-blog-cong-nghe-dau.jpg
 published: true
 publicationDate: 2019-01-06
