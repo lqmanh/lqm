@@ -13,9 +13,9 @@
     "clean": "rm -rf .next dist node_modules",
     "dev": "next",
     "build:content": "node content-builder.js",
-    "build": "npm run build:content && next build",
-    "export": "npm run build && next export -o dist",
-    "now-build": "npm run export",
+    "build": "yarn run build:content && next build",
+    "export": "yarn run build && next export -o dist",
+    "now-build": "yarn run export",
     "start": "next start"
   },
   "dependencies": {
