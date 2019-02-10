@@ -1,29 +1,26 @@
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share'
 
 export default (props) => (
-  <>
-    <div>
-      <span>Share:</span>
-      <FacebookShareButton className='share-button' url={props.url}>
+  <div>
+    <span>Share:</span>
+    <div className='share-button'>
+      <FacebookShareButton url={props.url}>
         <FacebookIcon size={24} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton className='share-button' url={props.url}>
+    </div>
+    <div className='share-button'>
+      <TwitterShareButton url={props.url}>
         <TwitterIcon size={24} round={true} />
       </TwitterShareButton>
     </div>
     <style jsx>{`
-      span,
-      .share-button:not(:last-child) {
-        margin-right: 0.5rem;
-      }
-      .share-button {
-        cursor: pointer;
+      :nth-child(n) {
         display: inline-flex;
         vertical-align: middle;
       }
-      .share-button:hover {
-        opacity: 0.9;
+      :not(:last-child) {
+        margin-right: 0.5rem;
       }
     `}</style>
-  </>
+  </div>
 )

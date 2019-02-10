@@ -20,15 +20,9 @@ export default (props) => (
       <h6 className='subtitle is-6'>
         <em>{props.description}</em>
       </h6>
-      <PostMeta tags={props.tags} publicationDate={props.publicationDate} />
+      <PostMeta tags={props.tags} publicationDate={props.publicationDate} lastUpdatedDate={props.lastUpdatedDate} />
     </div>
     <style jsx>{`
-      .card {
-        border-radius: 0.5rem;
-      }
-      .card:not(:last-child) {
-        margin-bottom: 3rem;
-      }
       img {
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;

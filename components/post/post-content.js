@@ -18,7 +18,7 @@ export default (props) => {
         <meta property='og:image' content={`${origin}${content.headerImage}`} />
       </Head>
       <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
-      <PostMeta tags={content.tags} publicationDate={content.publicationDate} />
+      <PostMeta tags={content.tags} publicationDate={content.publicationDate} lastUpdatedDate={content.lastUpdatedDate} />
       <Share url={url} />
     </>
   )
