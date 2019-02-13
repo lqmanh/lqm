@@ -2,7 +2,7 @@ export default () => (
   <footer className='footer'>
     <div className='content has-text-centered'>
       <p>
-        Copyright &copy; 2018&nbsp;
+        Copyright &copy; 2018&ndash;2019&nbsp;
         <a href='https://cvitae.now.sh/'>Luong Quang Manh</a>
         . All rights reserved.
         <br />
