@@ -13,14 +13,12 @@ export default (props) => {
   }
   return (
     <div className='level'>
+      <div className='level-item'>{props.tags.length ? <TagList tags={props.tags} /> : null}</div>
       <div className='level-item'>
-        <TagList tags={props.tags} />
-      </div>
-      <span className='level-item'>
         <ion-icon name='calendar' />
         &nbsp;
         {`${text} on: ${dayjs(date).format('ddd, DD MMM YYYY')}`}
-      </span>
+      </div>
     </div>
   )
 }
