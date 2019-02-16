@@ -1,6 +1,7 @@
 export default ({ tags = [] }) => (
-  <div>
-    <span>Tags:&nbsp;</span>
+  <>
+    <ion-icon name='pricetags' />
+    &nbsp;Tags:&nbsp;
     <div className='tags is-inline-flex'>
       {tags.map((tag, i) => (
         <span className='tag' key={i}>
@@ -8,5 +9,5 @@ export default ({ tags = [] }) => (
         </span>
       ))}
     </div>
-  </div>
+  </>
 )
