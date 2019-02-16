@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import Layout from '../components/layout'
 import PostList from '../components/post/post-list'
+import PinnedPostList from '../components/post/pinned-post-list'
 
 export default () => (
   <>
@@ -9,9 +10,16 @@ export default () => (
       <title>LQM</title>
     </Head>
     <Layout>
-      <section className='section columns is-centered is-mobile'>
-        <div className='column is-12-mobile is-10-tablet is-8-desktop is-6-widescreen'>
-          <PostList />
+      <section className='section'>
+        <div className='container is-fluid'>
+          <div className='columns'>
+            <div className='column is-4'>
+              <PinnedPostList />
+            </div>
+            <div className='column is-8'>
+              <PostList />
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

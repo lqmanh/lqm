@@ -1,32 +1,19 @@
 import dayjs from 'dayjs'
 
-import PostListItem from './post-list-item'
+import PostCard from './post-card'
+let { children: posts } = require('../../content/.dirstat.json')
 
 export default () => {
-  const posts = require('../../content/.dirstat.json').children
+  posts = posts.filter((post) => post.meta.published)
   posts.sort((a, b) => {
     if (dayjs(b.meta.publicationDate).isAfter(dayjs(a.meta.publicationDate))) return 1
     return -1
   })
   return (
     <>
-      {posts.map((post, i) => {
-        const { name } = post.path
-        const { title, description, headerImage, published, publicationDate, lastUpdatedDate, tags } = post.meta
-        if (published)
-          return (
-            <PostListItem
-              key={i}
-              slug={name}
-              title={title}
-              description={description}
-              headerImage={headerImage}
-              publicationDate={publicationDate}
-              lastUpdatedDate={lastUpdatedDate}
-              tags={tags}
-            />
-          )
-      })}
+      {posts.map((post, i) => (
+        <PostCard slug={post.path.name} meta={post.meta} key={i} />
+      ))}
     </>
   )
 }
