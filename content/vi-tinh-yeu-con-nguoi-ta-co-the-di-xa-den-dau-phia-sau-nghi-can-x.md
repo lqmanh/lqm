@@ -4,6 +4,7 @@ description: Trích từ những dòng cảm nhận ngắn gọn của Stefan S 
 headerImage: /static/vi-tinh-yeu-con-nguoi-ta-co-the-di-xa-den-dau-phia-sau-nghi-can-x.jpg
 published: true
 publicationDate: 2019-02-09
+lastUpdatedDate: 2019-02-10
 tags: [review, book, movie]
 ---
 
@@ -15,7 +16,7 @@ Trích từ những dòng cảm nhận ngắn gọn của Stefan S - A Nutshell 
 
 ![Header Image](/static/vi-tinh-yeu-con-nguoi-ta-co-the-di-xa-den-dau-phia-sau-nghi-can-x.jpg)
 
-Mình được tặng cuốn **Phía Sau Nghi Can X** từ một người bạn trong một hoàn cảnh khá đặc biệt. Ừ, mình đã thực sự phấn khích về nó ngay từ khi đọc những lời giới thiệu trên mạng. Ừ, cũng biết chúng toàn là những lời lẽ có cánh dành cho tác phẩm mà bình thường mình không tin tưởng lắm. Nhưng truyện trinh thám mà, thể loại duy nhất mình có thể đọc xong chỉ trong 2-3 ngày. Trên thực tế, những ngày cận Tết cày cuốc quyển sách này của mình đã không hề uổng phí. Thêm mấy ngày sau Tết để cày nốt mấy bộ phim chuyển thể từ tác phẩm này nữa.
+Mình được tặng cuốn **Phía Sau Nghi Can X** từ một người bạn trong một hoàn cảnh khá đặc biệt. Ừ, mình đã thực sự phấn khích về nó ngay từ khi đọc những lời giới thiệu trên mạng. Ừ, cũng biết chúng toàn là những lời lẽ có cánh dành cho tác phẩm mà bình thường mình không tin tưởng lắm. Nhưng truyện trinh thám mà, thể loại duy nhất mình có thể đọc hết cả quyển mấy trăm trang chỉ trong đôi ba ngày. Trên thực tế, những ngày cận Tết cày cuốc quyển sách này của mình đã không hề uổng phí. Thêm mấy ngày sau Tết để cày nốt mấy bộ phim chuyển thể từ tác phẩm này nữa.
 
 Bài viết này mình sẽ tập trung vào nguyên tác (thực ra là bản dịch của Nhã Nam) của nhà văn Higashino Keigo. Cụ thể hơn là phần nội dung. Như nhiều tác phẩm văn học nước ngoài khác mình sẽ review trong tương lai, mình sẽ không quá tập trung vào khía cạnh câu từ hay cách diễn đạt, vì dù sao cũng là văn của dịch giả. Về phần phim, mình sẽ chỉ nói một cách ngắn gọn ở cuối bài.
 
@@ -25,7 +26,7 @@ Một lưu ý nhỏ, đó là bài viết sẽ đề cập khá nhiều nội du
 
 Đây là cuốn tiểu thuyết đầu tiên của Higashino Keigo mà mình có cơ hội cầm trên tay. Cũng là một trong những tác phẩm nổi tiếng nhất của ông. Sự nổi tiếng ấy hoàn toàn có cơ sở.
 
-Khác với nhiều tiểu thuyết trinh thám khác, tác phẩm mang một cốt truyện không quá phức tạp, mà chậm rãi, đều đều đôi khi đến sốt ruột. Thực tế, phải nói rằng, quá trình điều tra luẩn quẩn phát sợ. Tình tiết nhẹ nhàng, ít biến cố lớn. Dẫu vậy, những điều ấy, cộng cả việc thiếu vắng những pha hành động nghẹt thở cũng không thể làm sức hút của câu chuyện giảm sút. Cú plot twist cuối truyện càng khẳng định một cách rõ ràng: Higashino Keigo có cách thức của riêng mình để làm nên một kiệt tác.
+Khác với nhiều tiểu thuyết trinh thám khác, tác phẩm mang một cốt truyện không quá phức tạp. Tiết tấu chậm rãi, đều đều đôi khi đến sốt ruột. Thực tế, phải nói rằng, quá trình điều tra luẩn quẩn phát sợ. Tình tiết nhẹ nhàng, ít biến cố lớn. Dẫu vậy, những điều ấy, cộng cả việc thiếu vắng những pha hành động nghẹt thở cũng không thể làm sức hút của câu chuyện giảm sút. Cú plot twist cuối truyện càng khẳng định một cách rõ ràng: Higashino Keigo có cách thức của riêng mình để làm nên một kiệt tác.
 
 Tác giả đã ngửa bài ngay từ những chương đầu tiên: Hanaoka Yasuko là thủ phạm giết chồng cũ - Togashi Shinji, với sự giúp sức của cô con gái Misato. Còn Ishigami Tetsuya - một thầy giáo dạy toán cấp ba, một thiên tài ẩn dật sau lốt gã hàng xóm lập dị, là kẻ giúp Yasuko phi tang cái xác. Nhưng câu hỏi _"Làm thế nào?"_ mới là điều giữ chân độc giả lại với trang sách. Rốt cuộc thì, đến ngay cả Yasuko cũng bất ngờ trước câu trả lời cơ mà!
 
@@ -67,4 +68,4 @@ Cuối cùng là bộ phim ra mắt năm 2017 của Trung Quốc. Có những ch
 
 ---
 
-Đến đây là hết rồi. Cảm ơn các bạn đã kiên nhẫn đọc hết bài viết này của mình và hẹn gặp lại!
+Đến đây là hết rồi. Cảm ơn các bạn đã kiên nhẫn đọc hết bài review đầu tay này của mình và hẹn gặp lại!
