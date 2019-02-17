@@ -6,6 +6,7 @@ published: true
 publicationDate: 2019-01-01
 lastUpdatedDate: 2019-02-06
 tags: [resolution]
+pinned: true
 ---
 
 # Cho Một 2019 Ngon Từ Thịt, Ngọt Từ Xương
