@@ -10,7 +10,7 @@ export default (props) => {
         </figure>
       </div>
       <div className='media-content'>
-        <h6 className='title is-6'>
+        <h6 className='subtitle is-6'>
           <Link prefetch href={`/posts/${props.slug}`}>
             <a>{title}</a>
           </Link>

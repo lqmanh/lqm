@@ -4,7 +4,7 @@ import PostBullet from './post-bullet'
 
 export default (props) => {
   let { posts } = props
-  posts = posts.filter((post) => post.meta.pinned && post.meta.published)
+  posts = posts.filter((post) => post.meta.featured && post.meta.published)
   posts.sort((a, b) => {
     if (dayjs(b.meta.publicationDate).isAfter(dayjs(a.meta.publicationDate))) return 1
     return -1
@@ -12,8 +12,8 @@ export default (props) => {
   return (
     <section className='section'>
       <h5 className='title is-5'>
-        <ion-icon name='bookmark' />
-        &nbsp;PINNED
+        <ion-icon name='star' />
+        &nbsp;FEATURED
       </h5>
       {posts.map((post, i) => (
         <PostBullet slug={post.path.name} meta={post.meta} key={i} />

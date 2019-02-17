@@ -14,11 +14,11 @@ export default (props) => {
         </div>
       ) : null}
       <div className='card-content'>
-        <h4 className='title is-4'>
+        <h5 className='title is-5'>
           <Link prefetch href={`/posts/${props.slug}`}>
             <a>{title}</a>
           </Link>
-        </h4>
+        </h5>
         <h6 className='subtitle is-6'>
           <em>{description}</em>
         </h6>
