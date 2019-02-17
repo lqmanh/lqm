@@ -1,13 +1,10 @@
 {
   "name": "lqm",
   "description": "LQM",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "license": "MIT",
   "author": "Luong Quang Manh",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/lqmanh/lqm.git"
-  },
+  "repository": "github:lqmanh/lqm",
   "main": "pages/index.js",
   "scripts": {
     "clean": "rm -rf .next dist node_modules",
