@@ -4,7 +4,7 @@ export default ({ tags = [] }) => (
     &nbsp;Tags:&nbsp;
     <div className='tags is-inline-flex'>
       {tags.map((tag, i) => (
-        <span className='tag' key={i}>
+        <span className='tag is-dark' key={i}>
           {tag}
         </span>
       ))}
