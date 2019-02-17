@@ -39,12 +39,6 @@ export default class TopBar extends PureComponent {
               </a>
             </Link>
           </div>
-          <div className='navbar-end'>
-            <a className='navbar-item'>
-              <ion-icon name='options' />
-              &nbsp;Options
-            </a>
-          </div>
         </div>
       </nav>
     )

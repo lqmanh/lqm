@@ -2,9 +2,10 @@ import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } fr
 
 export default (props) => (
   <div>
-    <ion-icon name='share' />
-    &nbsp;
-    <span>Share:</span>
+    <span>
+      <ion-icon name='share' />
+      &nbsp;Share:
+    </span>
     <div className='share-button'>
       <FacebookShareButton url={props.url}>
         <FacebookIcon size={24} round={true} />

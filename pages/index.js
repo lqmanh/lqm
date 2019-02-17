@@ -1,15 +1,14 @@
 import Head from 'next/head'
 
 import Layout from '../components/layout'
+import PostCards from '../components/post/post-cards'
 import PostList from '../components/post/post-list'
-import PinnedPostList from '../components/post/pinned-post-list'
-import FeaturedPostList from '../components/post/featured-post-list'
 const { children: posts } = require('../content/.dirstat.json')
 
 const LeftSideBar = () => (
   <>
-    <PinnedPostList posts={posts} />
-    <FeaturedPostList posts={posts} />
+    <PostList posts={posts} type='pinned' />
+    <PostList posts={posts} type='featured' />
   </>
 )
 
@@ -22,7 +21,7 @@ export default () => (
       <section className='section'>
         <div className='columns is-centered'>
           <div className='column is-12-tablet is-10-desktop is-8-widescreen is-6-fullhd'>
-            <PostList posts={posts} />
+            <PostCards posts={posts} />
           </div>
         </div>
       </section>
