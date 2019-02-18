@@ -3,7 +3,7 @@ import Document, { Head, Main, NextScript } from 'next/document'
 const adsenseMarkup = {
   __html: `
     (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-4344567375162528",
+      google_ad_client: "ca-pub-8865952958526432",
       enable_page_level_ads: true
     });
   `
