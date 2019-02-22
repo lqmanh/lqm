@@ -9,7 +9,9 @@ export default (props) => {
       {headerImage ? (
         <div className='card-image'>
           <figure className='image'>
-            <img src={headerImage} />
+            <Link prefetch href={`/posts/${props.slug}`}>
+              <img src={headerImage} />
+            </Link>
           </figure>
         </div>
       ) : null}
@@ -28,6 +30,7 @@ export default (props) => {
         img {
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
+          cursor: pointer;
           max-height: 50vh;
           object-fit: cover;
         }
