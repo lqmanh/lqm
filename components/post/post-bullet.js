@@ -6,7 +6,9 @@ export default (props) => {
     <article className='media'>
       <div className='media-left'>
         <figure className='image'>
-          <img src={headerImage} />
+          <Link prefetch href={`/posts/${props.slug}`}>
+            <img src={headerImage} />
+          </Link>
         </figure>
       </div>
       <div className='media-content'>
@@ -18,6 +20,7 @@ export default (props) => {
       </div>
       <style jsx>{`
         img {
+          cursor: pointer;
           object-fit: cover;
           width: 64px;
           height: 64px;

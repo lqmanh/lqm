@@ -17,7 +17,7 @@ export default (props) => {
       <div className='level-item'>
         <ion-icon name='calendar' />
         &nbsp;
-        {`${text} on: ${dayjs(date).format('ddd, DD MMM YYYY')}`}
+        {`${text} on ${dayjs(date).format('ddd, DD MMM YYYY')}`}
       </div>
     </div>
   )
