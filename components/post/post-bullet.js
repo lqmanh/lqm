@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export default (props) => {
-  const { title, headerImage } = props.meta
+  const { title, headerImage = '/static/default.jpg' } = props.meta
   return (
     <article className='media'>
       <div className='media-left'>
