@@ -25,10 +25,19 @@ export default class TopBar extends PureComponent {
           </a>
         </div>
         <div className={`navbar-menu ${this.state.burgerActive ? 'is-active' : ''}`}>
-          <div className='navbar-end'>
-            <a className='navbar-item'>
-              <ion-icon name='options' />
-            </a>
+          <div className='navbar-start'>
+            <Link prefetch href='/posts/day-khong-phai-blog-cong-nghe-dau'>
+              <a className='navbar-item'>
+                <ion-icon name='information-circle-outline' />
+                &nbsp;About
+              </a>
+            </Link>
+            <Link prefetch href='https://github.com/lqmanh/lqm'>
+              <a className='navbar-item'>
+                <ion-icon name='logo-github' />
+                &nbsp;Github
+              </a>
+            </Link>
           </div>
         </div>
       </nav>

@@ -1,17 +1,29 @@
 import Head from 'next/head'
 
 import Layout from '../components/layout'
-import PostList from '../components/post/post-list'
+import PostCards from '../components/post/post-cards'
+import { PinnedPosts, FeaturedPosts, LastUpdatedPosts } from '../components/post/post-list'
+const { children: posts } = require('../content/.dirstat.json')
+
+const LeftSideBar = () => (
+  <>
+    <PinnedPosts posts={posts} />
+    <FeaturedPosts posts={posts} />
+    <LastUpdatedPosts posts={posts} />
+  </>
+)
 
 export default () => (
   <>
     <Head>
       <title>LQM</title>
     </Head>
-    <Layout>
-      <section className='section columns is-centered is-mobile'>
-        <div className='column is-12-mobile is-10-tablet is-8-desktop is-6-widescreen'>
-          <PostList />
+    <Layout left={<LeftSideBar />}>
+      <section className='section'>
+        <div className='columns is-centered'>
+          <div className='column is-12-tablet is-10-desktop is-8-widescreen is-6-fullhd'>
+            <PostCards posts={posts} />
+          </div>
         </div>
       </section>
     </Layout>

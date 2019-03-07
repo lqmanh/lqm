@@ -2,7 +2,10 @@ import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } fr
 
 export default (props) => (
   <div>
-    <span>Share:</span>
+    <span>
+      <ion-icon name='share' />
+      &nbsp;Share:
+    </span>
     <div className='share-button'>
       <FacebookShareButton url={props.url}>
         <FacebookIcon size={24} round={true} />
@@ -14,6 +17,7 @@ export default (props) => (
       </TwitterShareButton>
     </div>
     <style jsx>{`
+      align-items: center;
       :nth-child(n) {
         display: inline-flex;
         vertical-align: middle;

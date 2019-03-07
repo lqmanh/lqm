@@ -1,13 +1,10 @@
 {
   "name": "lqm",
   "description": "LQM",
-  "version": "0.7.1",
+  "version": "0.11.0",
   "license": "MIT",
   "author": "Luong Quang Manh",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/lqmanh/lqm.git"
-  },
+  "repository": "github:lqmanh/lqm",
   "main": "pages/index.js",
   "scripts": {
     "clean": "rm -rf .next dist node_modules",
@@ -21,19 +18,19 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bulma": "^0.7.4",
-    "dayjs": "^1.7.8",
+    "dayjs": "^1.8.9",
     "directory-stat": "^1.0.1",
     "front-matter": "^3.0.1",
-    "next": "^7.0.2",
+    "next": "^8.0.3",
     "node-sass": "^4.11.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-share": "^2.4.0",
     "showdown": "^1.9.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.0",
+    "eslint": "^5.15.1",
     "eslint-plugin-react": "^7.12.4"
   }
 }
