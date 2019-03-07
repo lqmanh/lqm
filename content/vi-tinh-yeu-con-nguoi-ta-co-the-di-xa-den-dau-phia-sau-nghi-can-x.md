@@ -6,7 +6,6 @@ published: true
 publicationDate: 2019-02-09
 lastUpdatedDate: 2019-02-10
 tags: [review, book, movie]
-pinned: true
 featured: true
 ---
 

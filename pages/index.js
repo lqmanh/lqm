@@ -2,13 +2,14 @@ import Head from 'next/head'
 
 import Layout from '../components/layout'
 import PostCards from '../components/post/post-cards'
-import PostList from '../components/post/post-list'
+import { PinnedPosts, FeaturedPosts, LastUpdatedPosts } from '../components/post/post-list'
 const { children: posts } = require('../content/.dirstat.json')
 
 const LeftSideBar = () => (
   <>
-    <PostList posts={posts} type='pinned' />
-    <PostList posts={posts} type='featured' />
+    <PinnedPosts posts={posts} />
+    <FeaturedPosts posts={posts} />
+    <LastUpdatedPosts posts={posts} />
   </>
 )
 

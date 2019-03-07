@@ -2,35 +2,48 @@ import dayjs from 'dayjs'
 
 import PostBullet from './post-bullet'
 
-export default (props) => {
-  let { posts, type } = props
-  posts = posts.filter((post) => post.meta[type] && post.meta.published)
+const PostList = (props) => (
+  <section className='section'>
+    <h5 className='title is-5'>
+      <ion-icon name={props.iconName} />
+      &nbsp;
+      {props.title}
+    </h5>
+    {props.posts.map((post, i) => (
+      <PostBullet slug={post.path.name} meta={post.meta} key={i} />
+    ))}
+    <style jsx>{`
+      .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    `}</style>
+  </section>
+)
+
+const PinnedPosts = (props) => {
+  let { posts } = props
+  posts = posts.filter((post) => post.meta.pinned && post.meta.published)
+  return <PostList title='PINNED' iconName='bookmark' posts={posts} />
+}
+
+const FeaturedPosts = (props) => {
+  let { posts } = props
+  posts = posts.filter((post) => post.meta.featured && post.meta.published)
+  return <PostList title='FEATURED' iconName='star' posts={posts} />
+}
+
+const LastUpdatedPosts = (props) => {
+  let { posts } = props
   posts.sort((a, b) => {
-    if (dayjs(b.meta.publicationDate).isAfter(dayjs(a.meta.publicationDate))) return 1
+    const dateA = a.meta.lastUpdatedDate ? a.meta.lastUpdatedDate : a.meta.publicationDate
+    const dateB = b.meta.lastUpdatedDate ? b.meta.lastUpdatedDate : b.meta.publicationDate
+    if (dayjs(dateB).isAfter(dayjs(dateA))) return 1
     return -1
   })
-
-  let iconName
-  if (type === 'pinned') iconName = 'bookmark'
-  else if (type === 'featured') iconName = 'star'
-
-  return (
-    <section className='section'>
-      <h5 className='title is-5'>
-        <ion-icon name={iconName} />
-        &nbsp;
-        {type.toUpperCase()}
-      </h5>
-      {posts.map((post, i) => (
-        <PostBullet slug={post.path.name} meta={post.meta} key={i} />
-      ))}
-      <style jsx>{`
-        .title {
-          display: flex;
-          align-items: center;
-          margin-bottom: 1rem;
-        }
-      `}</style>
-    </section>
-  )
+  return <PostList title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 3)} />
 }
+
+export default PostList
+export { PinnedPosts, FeaturedPosts, LastUpdatedPosts }
