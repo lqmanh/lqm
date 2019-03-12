@@ -3,7 +3,8 @@ title: SNMP - What I Know
 description: Một vài ghi chép về Giao thức Quản lý Mạng Đơn giản - Simple Network Management Protocol (SNMP), cho một dự án cá nhân ngắn hạn về quản lý tài nguyên hệ thống mạng.
 published: true
 publicationDate: 2019-01-18
-tags: [wik, snmp]
+lastUpdatedDate: 2019-03-12
+tags: [computer-science, wik]
 ---
 
 # SNMP - What I Know
@@ -37,7 +38,7 @@ tags: [wik, snmp]
    - Thu thập thông tin của thiết bị và gửi chúng về hệ thống quản lý.
 3. **Network management station (NMS)**
    - Quản lý hệ thống mạng thông qua các agents.
-4. **Management information base (MIB)?**
+4. **Management information base (MIB)**
    - Cơ sở dữ liệu được lưu dưới dạng text (.mib).
    - Mô tả các tài nguyên mà hệ thống quản lý.
    - Được tổ chức theo dạng cây _(hierarchy)_.
@@ -55,7 +56,7 @@ Các phương thức chính của SNMP
 6. **TRAP**: Agent tự động gửi về manager mà không được yêu cầu. Thường là thông báo lỗi.
 7. **INFORM**: Tương tự như TRAP, nhưng yêu cầu xác nhận _(acknowledgement)_ từ manager. _Có từ phiên bản v2c._
 
-## Net-SNMP
+## NET-SNMP
 
 ### Giới thiệu
 
@@ -80,3 +81,18 @@ Các phương thức chính của SNMP
    - Có thể được mở rộng.
 5. **Thư viện hỗ trợ phát triển ứng dụng SNMP**
    - Hỗ trợ ngôn ngữ C và Perl.
+
+### Tuỳ chỉnh _(Configuration)_
+
+Các tuỳ chỉnh cho Net-SNMP có thể được lưu trữ trong:
+
+1. `~/.snmp/snmpd.conf`: Chỉ cho một người dùng nhất định và có mức độ ưu tiên cao nhất.
+2. `/usr/share/snmp/snmpd.conf`: Cho tất cả người dùng trong hệ thống.
+3. `/etc/snmp/snmpd.conf`: Thường chỉ cho phiên bản v1 và v2c.
+4. `/var/net-snmp/snmpd.conf`: Được sinh ra bởi `snmpd` và bị ghi đè mỗi khi `snmpd` khởi động. Vì vậy, không được tự ý lưu tuỳ chỉnh vào đây, trừ _"createUser" tokens_.
+
+`snmpconf` là một ứng dụng CLI có sẵn hỗ trợ việc sinh ra file tuỳ chỉnh cho `snmpd`.
+
+### Management information base (MIB)
+
+Các file MIBs được lưu trữ trong `/usr/share/snmp/mibs` dưới dạng text (.txt).
