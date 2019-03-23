@@ -8,7 +8,7 @@ const { children: posts } = require('../content/.dirstat.json')
 export default () => (
   <>
     <Head>
-      <title>LQM</title>
+      <title>LQM by Lương Quang Mạnh</title>
     </Head>
     <Layout left={<LeftSideBar posts={posts} />}>
       <section className='section'>

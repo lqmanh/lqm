@@ -10,7 +10,7 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>{content.title} &ndash; LQM</title>
+        <title>{content.title} &ndash; LQM by Lương Quang Mạnh</title>
         <meta property='og:url' content={url} />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={content.title} />

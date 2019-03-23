@@ -32,7 +32,8 @@ $navbar-height: 3rem;
   box-shadow: 0 4px 8px rgba($grey-darker, 0.1);
 }
 
-.level > .level-item:not(.is-narrow) {
+.level > .level-item:not(.is-narrow),
+.level.is-mobile > .level-item:not(.is-narrow) {
   flex-grow: 0;
 }
 
