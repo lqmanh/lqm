@@ -3,7 +3,7 @@ export default () => (
     <div className='content has-text-centered'>
       <p>
         Copyright &copy; 2018&ndash;2019&nbsp;
-        <a href='https://cvitae.now.sh/'>Luong Quang Manh</a>
+        <a href='https://cvitae.now.sh/'>Lương Quang Mạnh</a>
         . All rights reserved.
         <br />
         The source code is licensed under&nbsp;
