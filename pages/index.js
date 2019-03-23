@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import Layout from '../components/layout'
-import LeftSideBar from '../components/left-side-bar'
+import LeftSideBar from '../components/side-bar/left-side-bar'
 import PostCards from '../components/post/post-cards'
 const { children: posts } = require('../content/.dirstat.json')
 

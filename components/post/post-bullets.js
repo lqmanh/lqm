@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 
 import PostBullet from './post-bullet'
 
-const PostList = (props) => (
+const PostBullets = (props) => (
   <section className='section'>
     <h5 className='title is-5'>
       <ion-icon name={props.iconName} />
@@ -22,28 +22,24 @@ const PostList = (props) => (
   </section>
 )
 
-const PinnedPosts = (props) => {
-  let { posts } = props
+const PinnedPosts = ({ posts }) => {
   posts = posts.filter((post) => post.meta.pinned && post.meta.published)
-  return <PostList title='PINNED' iconName='bookmark' posts={posts} />
+  return <PostBullets title='PINNED' iconName='bookmark' posts={posts} />
 }
 
-const FeaturedPosts = (props) => {
-  let { posts } = props
+const FeaturedPosts = ({ posts }) => {
   posts = posts.filter((post) => post.meta.featured && post.meta.published)
-  return <PostList title='FEATURED' iconName='star' posts={posts} />
+  return <PostBullets title='FEATURED' iconName='star' posts={posts} />
 }
 
-const LastUpdatedPosts = (props) => {
-  let { posts } = props
+const LastUpdatedPosts = ({ posts }) => {
   posts.sort((a, b) => {
     const dateA = a.meta.lastUpdatedDate ? a.meta.lastUpdatedDate : a.meta.publicationDate
     const dateB = b.meta.lastUpdatedDate ? b.meta.lastUpdatedDate : b.meta.publicationDate
     if (dayjs(dateB).isAfter(dayjs(dateA))) return 1
     return -1
   })
-  return <PostList title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 3)} />
+  return <PostBullets title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 3)} />
 }
 
-export default PostList
 export { PinnedPosts, FeaturedPosts, LastUpdatedPosts }

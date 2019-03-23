@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import PostMeta from '../post-meta'
+import PostMeta from './post-meta'
 import Share from '../share'
 
 export default (props) => {
@@ -18,7 +18,11 @@ export default (props) => {
         <meta property='og:image' content={`${origin}${content.headerImage}`} />
       </Head>
       <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
-      <PostMeta tags={content.tags} publicationDate={content.publicationDate} lastUpdatedDate={content.lastUpdatedDate} />
+      <PostMeta
+        tags={content.tags}
+        publicationDate={content.publicationDate}
+        lastUpdatedDate={content.lastUpdatedDate}
+      />
       <Share url={url} />
     </>
   )

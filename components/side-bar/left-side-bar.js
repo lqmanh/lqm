@@ -1,4 +1,4 @@
-import { PinnedPosts, FeaturedPosts, LastUpdatedPosts } from '../components/post/post-list'
+import { PinnedPosts, FeaturedPosts, LastUpdatedPosts } from '../post/post-bullets'
 
 export default ({ posts }) => (
   <>

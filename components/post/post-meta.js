@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 
-import TagList from './tag-list'
+import TagList from '../tag-list'
 
 export default (props) => {
   let date, text

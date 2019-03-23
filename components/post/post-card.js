@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import PostMeta from '../post-meta'
+import PostMeta from './post-meta'
 
 export default (props) => {
   const { title, description, headerImage, publicationDate, lastUpdatedDate, tags } = props.meta
