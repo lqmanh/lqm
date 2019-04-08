@@ -3,7 +3,7 @@ title: SNMP - What I Know
 description: Một vài ghi chép về Giao thức Quản lý Mạng Đơn giản - Simple Network Management Protocol (SNMP), cho một dự án cá nhân ngắn hạn về quản lý tài nguyên hệ thống mạng.
 published: true
 publicationDate: 2019-01-18
-lastUpdatedDate: 2019-03-12
+lastUpdatedDate: 2019-04-08
 tags: [computer-science, wik]
 ---
 
@@ -39,10 +39,7 @@ tags: [computer-science, wik]
 3. **Network management station (NMS)**
    - Quản lý hệ thống mạng thông qua các agents.
 4. **Management information base (MIB)**
-   - Cơ sở dữ liệu được lưu dưới dạng text (.mib).
    - Mô tả các tài nguyên mà hệ thống quản lý.
-   - Được tổ chức theo dạng cây _(hierarchy)_.
-   - Mỗi đơn vị gắn liền với một object identifier (OID).
 
 ### Cách thức hoạt động
 
@@ -55,6 +52,20 @@ Các phương thức chính của SNMP
 5. **SET**: Được gửi từ manager để thay đổi một thông số nào đó của agent.
 6. **TRAP**: Agent tự động gửi về manager mà không được yêu cầu. Thường là thông báo lỗi.
 7. **INFORM**: Tương tự như TRAP, nhưng yêu cầu xác nhận _(acknowledgement)_ từ manager. _Có từ phiên bản v2c._
+
+## MANAGEMENT INFORMATION BASE (MIB)
+
+- Để định vị mỗi tài nguyên mà SNMP quản lý, người ta dùng hệ thống MIB. Mỗi tài nguyên ấy được định danh bởi một object identifier (OID).
+- Hệ thống MIB có thể được mô tả như một cây có gốc không tên _(nameless root)_.
+- Các file MIBs được lưu trữ trong `/usr/share/snmp/mibs` dưới dạng text (.txt).
+- Mỗi OID được thể hiện qua standard dotted naming system. Ví dụ với OID 1.3.6.1.4.1.77 ta có:
+  - 1: International Organization for Standardization (ISO)
+  - 3: Organization (ORG)
+  - 6: Department of Defense (DoD)
+  - 1: Internet
+  - 4: Private
+  - 1: Enterprises
+  - 77: LAN Manager MIB II
 
 ## NET-SNMP
 
@@ -92,7 +103,3 @@ Các tuỳ chỉnh cho Net-SNMP có thể được lưu trữ trong:
 4. `/var/net-snmp/snmpd.conf`: Được sinh ra bởi `snmpd` và bị ghi đè mỗi khi `snmpd` khởi động. Vì vậy, không được tự ý lưu tuỳ chỉnh vào đây, trừ _"createUser" tokens_.
 
 `snmpconf` là một ứng dụng CLI có sẵn hỗ trợ việc sinh ra file tuỳ chỉnh cho `snmpd`.
-
-### Management information base (MIB)
-
-Các file MIBs được lưu trữ trong `/usr/share/snmp/mibs` dưới dạng text (.txt).
