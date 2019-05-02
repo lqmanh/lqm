@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import PostMeta from '../post-meta'
+import PostMeta from './post-meta'
 import Share from '../share'
 
 export default (props) => {
@@ -10,7 +10,7 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>{content.title} &ndash; LQM</title>
+        <title>{content.title} &ndash; LQM by Lương Quang Mạnh</title>
         <meta property='og:url' content={url} />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={content.title} />
@@ -18,7 +18,11 @@ export default (props) => {
         <meta property='og:image' content={`${origin}${content.headerImage}`} />
       </Head>
       <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
-      <PostMeta tags={content.tags} publicationDate={content.publicationDate} lastUpdatedDate={content.lastUpdatedDate} />
+      <PostMeta
+        tags={content.tags}
+        publicationDate={content.publicationDate}
+        lastUpdatedDate={content.lastUpdatedDate}
+      />
       <Share url={url} />
     </>
   )
