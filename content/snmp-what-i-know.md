@@ -3,7 +3,7 @@ title: SNMP - What I Know
 description: Một vài ghi chép về Giao thức Quản lý Mạng Đơn giản - Simple Network Management Protocol (SNMP), cho một dự án cá nhân ngắn hạn về quản lý tài nguyên hệ thống mạng.
 published: true
 publicationDate: 2019-01-18
-lastUpdatedDate: 2019-04-08
+lastUpdatedDate: 2019-05-08
 tags: [computer-science, wik]
 ---
 
@@ -25,6 +25,7 @@ tags: [computer-science, wik]
    - Sử dụng community strings để xác thực.
 2. [**v2c**](https://www.ietf.org/rfc/rfc1901)
    - Được sử dụng rộng rãi nhất.
+   - Bổ sung 2 phương thức mới: GETBULK và INFORM.
    - Có thể sử dụng giao thức TCP nhưng mặc định vẫn là UDP.
 3. [**v3**](https://www.ietf.org/rfc/rfc2571)
    - Tăng cường bảo mật và tính riêng tư bằng cách băm _(hash)_ địa chỉ MAC với MD5 hoặc SHA để xác thực cùng DES-56 để mã hoá dữ liệu.
@@ -36,7 +37,7 @@ tags: [computer-science, wik]
 2. **Agent**
    - Phần mềm chạy trên thiết bị được quản lý.
    - Thu thập thông tin của thiết bị và gửi chúng về hệ thống quản lý.
-3. **Network management station (NMS)**
+3. **Manager / Network management station (NMS)**
    - Quản lý hệ thống mạng thông qua các agents.
 4. **Management information base (MIB)**
    - Mô tả các tài nguyên mà hệ thống quản lý.
