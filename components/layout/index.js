@@ -1,8 +1,10 @@
+import TopBar from './topbar'
 import Footer from './footer'
 import '../../styles/index.scss'
 
 export default (props) => (
   <>
+    {props.withTopBar ? <TopBar /> : null}
     <div className='columns'>
       {props.left ? (
         <>
