@@ -1,12 +1,4 @@
-const fsModule = require('fs')
-let fs = fsModule.promises
-if (!fs) {
-  const { promisify } = require('util')
-  fs = {
-    readFile: promisify(fsModule.readFile),
-    writeFile: promisify(fsModule.writeFile)
-  }
-}
+const fs = require('fs').promises
 const path = require('path')
 const { StatWriter } = require('directory-stat')
 const { StatCollector } = require('directory-stat/stat-collectors')
