@@ -15,7 +15,7 @@ export default () => (
         <Link href='#'>
           <a className='navbar-item'>
             <ion-icon name="arrow-back" />
-            &nbsp;Previous
+            &nbsp;Prev.
           </a>
         </Link>
       </div>
