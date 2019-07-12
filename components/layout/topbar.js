@@ -10,7 +10,7 @@ export default () => (
         </a>
       </Link>
     </div>
-    <div className='navbar-menu'>
+    {/* <div className='navbar-menu'>
       <div className='navbar-start'>
         <Link href='#'>
           <a className='navbar-item'>
@@ -27,6 +27,6 @@ export default () => (
           </a>
         </Link>
       </div>
-    </div>
+    </div> */}
   </nav>
 )
