@@ -1,6 +1,5 @@
-import dayjs from 'dayjs'
-
 import PostBullet from './post-bullet'
+import { lastUpdatedDate } from '../../utils/sort-criteria'
 
 const PostBullets = (props) => (
   <section className='section'>
@@ -33,12 +32,7 @@ const FeaturedPosts = ({ posts }) => {
 }
 
 const LastUpdatedPosts = ({ posts }) => {
-  posts.sort((a, b) => {
-    const dateA = a.meta.lastUpdatedDate ? a.meta.lastUpdatedDate : a.meta.publicationDate
-    const dateB = b.meta.lastUpdatedDate ? b.meta.lastUpdatedDate : b.meta.publicationDate
-    if (dayjs(dateB).isAfter(dayjs(dateA))) return 1
-    return -1
-  })
+  posts.sort(lastUpdatedDate)
   return <PostBullets title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 3)} />
 }
 
