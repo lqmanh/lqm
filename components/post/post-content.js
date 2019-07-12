@@ -3,10 +3,11 @@ import Head from 'next/head'
 import PostMeta from './post-meta'
 import Share from '../share'
 
+const ORIGIN = 'https://lqm.now.sh'
+
 export default (props) => {
+  const url = `${ORIGIN}/posts/${props.slug}`
   const content = require(`../../content/${props.slug}.json`)
-  const origin = 'https://lqm.now.sh'
-  const url = `${origin}/posts/${props.slug}`
   return (
     <>
       <Head>
@@ -15,7 +16,7 @@ export default (props) => {
         <meta property='og:type' content='article' />
         <meta property='og:title' content={content.title} />
         <meta property='og:description' content={content.description} />
-        <meta property='og:image' content={`${origin}${content.headerImage}`} />
+        <meta property='og:image' content={`${ORIGIN}${content.headerImage}`} />
       </Head>
       <article className='content' dangerouslySetInnerHTML={{ __html: content.bodyHtml }} />
       <PostMeta

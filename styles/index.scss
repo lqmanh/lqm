@@ -13,9 +13,10 @@ $card-shadow: none;
 $footer-background-color: $white;
 $footer-padding: 3rem 1.5rem 3rem;
 
+$navbar-background-color: $white-paper;
 $navbar-box-shadow-color: rgba($grey-darker, 0.1);
 $navbar-box-shadow-size: 0 4px 8px;
-$navbar-height: 3rem;
+// $navbar-height: 3rem;
 
 @import '../node_modules/bulma/bulma.sass';
 

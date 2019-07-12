@@ -1,11 +1,9 @@
 const withSass = require('@zeit/next-sass')
+const { children: posts } = require('./content/.dirstat.json')
 
 const configs = {
   exportPathMap: async () => {
-    const posts = require('./content/.dirstat.json').children
-    const pathMap = {
-      '/': { page: '/' }
-    }
+    const pathMap = { '/': { page: '/' } }
     for (const post of posts) {
       pathMap[`/posts/${post.path.name}`] = {
         page: '/post',
