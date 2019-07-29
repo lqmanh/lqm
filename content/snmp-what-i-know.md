@@ -3,7 +3,7 @@ title: SNMP - What I Know
 description: Một vài ghi chép về Giao thức Quản lý Mạng Đơn giản - Simple Network Management Protocol (SNMP), cho một dự án cá nhân ngắn hạn về quản lý tài nguyên hệ thống mạng.
 published: true
 publicationDate: 2019-01-18
-lastUpdatedDate: 2019-05-08
+lastUpdatedDate: 2019-07-29
 tags: [computer-science, wik]
 ---
 
@@ -49,8 +49,8 @@ Các phương thức chính của SNMP
 1. **GET**: Được gửi từ manager để lấy một thông số nào đó, thông qua OID.
 2. **GETNEXT**: Được gửi từ manager để lấy giá trị của OID tiếp theo trong cây MIB.
 3. **GETBULK**: Được gửi từ manager để lấy một lượng lớn thông tin. _Có từ phiên bản v2c._
-4. **RESPONSE**: Agent hồi đáp yêu cầu từ manager, chứa giá trị của thông số được yêu cầu.
-5. **SET**: Được gửi từ manager để thay đổi một thông số nào đó của agent.
+4. **SET**: Được gửi từ manager để thay đổi một thông số nào đó của agent.
+5. **RESPONSE**: Agent hồi đáp yêu cầu từ manager, chứa giá trị của thông số được yêu cầu.
 6. **TRAP**: Agent tự động gửi về manager mà không được yêu cầu. Thường là thông báo lỗi.
 7. **INFORM**: Tương tự như TRAP, nhưng yêu cầu xác nhận _(acknowledgement)_ từ manager. _Có từ phiên bản v2c._
 
@@ -58,7 +58,7 @@ Các phương thức chính của SNMP
 
 - Để định vị mỗi tài nguyên mà SNMP quản lý, người ta dùng hệ thống MIB. Mỗi tài nguyên ấy được định danh bởi một object identifier (OID).
 - Hệ thống MIB có thể được mô tả như một cây có gốc không tên _(nameless root)_.
-- Các file MIBs được lưu trữ trong `/usr/share/snmp/mibs` dưới dạng text (.txt).
+- Các file MIB được lưu trữ trong `/usr/share/snmp/mibs` dưới dạng text (.txt).
 - Mỗi OID được thể hiện qua standard dotted naming system. Ví dụ với OID 1.3.6.1.4.1.77 ta có:
   - 1: International Organization for Standardization (ISO)
   - 3: Organization (ORG)
