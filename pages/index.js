@@ -13,7 +13,7 @@ export default () => (
     <Layout left={<LeftSideBar posts={posts} />}>
       <section className='section'>
         <div className='columns is-centered'>
-          <div className='column is-12-tablet is-10-desktop is-8-widescreen is-6-fullhd'>
+          <div className='column is-12-tablet is-10-desktop is-8-widescreen'>
             <PostCards posts={posts} />
           </div>
         </div>
