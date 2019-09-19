@@ -4,7 +4,7 @@ description: Và đây, 2019 là năm đầu tiên mình chịu ngồi viết ne
 headerImage: /static/cho-mot-2019-ngon-tu-thit-ngot-tu-xuong.jpg
 published: true
 publicationDate: 2019-01-01
-lastUpdatedDate: 2019-02-06
+lastUpdatedDate: 2019-05-03
 tags: [resolution]
 pinned: true
 ---
@@ -22,11 +22,11 @@ Và đây, 2019 là năm đầu tiên mình chịu ngồi viết new year resolu
 ### Việc cần làm
 
 1. Ưu tiên số một, thi TOEIC
-2. Tìm người hợp tác phát triển [Spiderman](https://github.com/albert-team/spiderman). Ừm, có thể một dự án liên quan khác nữa?
-3. Chăm viết blog xíu đi!
-4. Hoàn thành khoá luận tốt nghiệp
-5. Tặng song thân phụ mẫu một món quà nhỏ bằng chính tiền do mình kiếm được
-6. Cấm trượt thêm môn nào _(có lẽ cái này mới là ưu tiên số một)_
+2. Hoàn thành khoá luận tốt nghiệp
+3. Tặng song thân phụ mẫu một món quà nhỏ bằng chính tiền do mình kiếm được
+4. Cấm trượt thêm môn nào _(có lẽ cái này mới là ưu tiên số một)_
+5. ~~Tìm người hợp tác phát triển [Spiderman](https://github.com/albert-team/spiderman). Ừm, có thể một dự án liên quan khác nữa?~~
+6. ~~Chăm viết blog xíu đi!~~
 
 ### Kĩ năng cần học
 
@@ -39,8 +39,9 @@ Và đây, 2019 là năm đầu tiên mình chịu ngồi viết new year resolu
 
 1. The Girl on the Train _(ôi xin người đọc nốt cho con quyển này!)_
 2. The Pragmatic Programmer
-3. The Mythical Man-Month
-4. ~~Phía Sau Nghi Can X~~
+3. Reactive Microservices Architecture
+4. Distributed Systems for Fun & Profit
+5. ~~Phía Sau Nghi Can X~~
 
 ### Nơi cần đến
 
