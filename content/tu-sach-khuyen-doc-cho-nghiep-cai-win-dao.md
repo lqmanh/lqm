@@ -1,23 +1,24 @@
 ---
 title: Tủ Sách Khuyên Đọc Dành Cho Nghiệp "Cài Win Dạo"
-description: Chào các bạn, chào các bạn, chào các bạn. Video của ngày hôm na... À nhầm, xin lỗi, dạo này mình hơi bị lậm chị Giang quá! Bài viết của ngày hôm nay chính là lời đáp cho chuỗi thử thách 7 ngày đến từ một người bạn. Ừ, có đứa dám thách thức mình cơ đấy :). Và thế là mình quyết định quét mạng nhện cái blog này luôn.
+description: Chào các bạn, chào các bạn, chào các bạn. Video của ngày hôm na... À nhầm, xin lỗi! Dạo này hình như mình hơi bị lậm chị Giang quá rồi. Bài viết của ngày hôm nay chính là lời đáp cho chuỗi thử thách 7 ngày đến từ một người bạn. Ừ, có đứa dám thách thức mình cơ đấy :). Và thế là mình quyết định quét mạng nhện cái blog này luôn.
 headerImage: /static/tu-sach-khuyen-doc-cho-nghiep-cai-win-dao.jpg
 published: true
 publicationDate: 2019-07-12
 tags: [book, computer-science]
+pinned: true
 ---
 
 # Tủ Sách Khuyên Đọc Dành Cho Nghiệp "Cài Win Dạo"
 
 ![Header Image](/static/tu-sach-khuyen-doc-cho-nghiep-cai-win-dao.jpg)
 
-Chào các bạn, chào các bạn, chào các bạn. Video của ngày hôm na... À nhầm, xin lỗi, dạo này mình hơi bị lậm chị Giang quá! Bài viết của ngày hôm nay chính là lời đáp cho chuỗi thử thách 7 ngày đến từ một người bạn. Ừ, có đứa dám thách thức mình cơ đấy :). Và thế là mình quyết định quét mạng nhện cái blog này luôn.
+Chào các bạn, chào các bạn, chào các bạn. Video của ngày hôm na... À nhầm, xin lỗi! Dạo này hình như mình hơi bị lậm chị Giang quá rồi. Bài viết của ngày hôm nay chính là lời đáp cho chuỗi thử thách 7 ngày đến từ một người bạn. Ừ, có đứa dám thách thức mình cơ đấy :). Và thế là mình quyết định quét mạng nhện cái blog này luôn.
 
 Sau gần nửa năm chả buồn dòm ngó chuyện viết lách (vì lười, vì bắt đầu đi làm, vì _Lười_, vì bận bịu với nhiều side projects quá, và vì **LƯỜI**), cuối cùng thì hôm nay mình cũng có chút động lực để nặn ra được cái bài viết này. Tiện tay cũng đã implement được thêm cái nút Home chỗ góc trên bên trái kìa mọi người ạ!
 
-Khác với nhiều bài viết trước, đây sẽ là một danh sách tổng hợp tất cả những quyển sách mình _đã đọc và thấy hay_ về chuyên ngành khoa học máy tính - cái ngành mọi người vẫn hay trêu là "cài Win dạo". Chính vì vậy, về chủ đề, chúng phần nhiều sẽ nghiêng về _goût_ của cá nhân mình hơn là những quyển sách mà ai cũng thấy hứng thú. Còn nói đến chất lượng, các bạn cứ yên tâm rằng mình mà đã giới thiệu thì chỉ có từ perfect trở lên!
+Khác với nhiều bài viết trước, đây sẽ là một danh sách tổng hợp tất cả những quyển sách mình _đã đọc và thấy hay_ về chuyên ngành khoa học máy tính - cái ngành mọi người vẫn hay trêu là "cài Win dạo". Chính vì vậy, về chủ đề, chúng phần nhiều sẽ nghiêng về goût của cá nhân mình hơn là những quyển sách mà ai cũng thấy hứng thú. Còn nói đến chất lượng, các bạn cứ yên tâm rằng mình mà đã giới thiệu thì chỉ có từ perfect trở lên!
 
-Trên thực tế, danh sách này đáng lẽ sẽ dài hơn một chút. Nhưng vì một lý do nào đấy: do mình không nhớ là đã đọc, do mình không thể sưu tầm, hay do cái gì khác có trời mới biết được,... chúng đã không thể có mặt ở đây hôm nay.
+Danh sách này đáng lẽ sẽ dài hơn một chút. Nhưng trên thực tế, vì một lý do nào đấy: do mình không nhớ là đã đọc, do mình không thể sưu tầm, hay do cái gì khác có trời mới biết được,... chúng đã không thể có mặt ở đây hôm nay.
 
 ## Các ngôn ngữ, thư viện và frameworks
 
