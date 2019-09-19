@@ -31,7 +31,7 @@ export default (props) => {
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           cursor: pointer;
-          max-height: 50vh;
+          max-height: 60vh;
           object-fit: cover;
         }
       `}</style>
