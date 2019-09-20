@@ -83,3 +83,6 @@ dist
 # Blog posts build output
 content/*.json
 content/.dirstat.json
+
+# Lock files
+*.lock

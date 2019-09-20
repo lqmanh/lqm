@@ -13,9 +13,8 @@
     "clean": "rm -rf .next dist content/*.json content/.*.json",
     "dev": "next",
     "build:content": "node content-builder.js",
-    "build": "yarn run build:content && next build",
-    "export": "yarn run build && next export -o dist",
-    "now-build": "yarn run export",
+    "build:app": "next build",
+    "build": "yarn run build:content && yarn run build:app",
     "start": "next start"
   },
   "dependencies": {
@@ -25,7 +24,7 @@
     "dayjs": "^1.8.16",
     "directory-stat": "^1.0.3",
     "front-matter": "^3.0.2",
-    "next": "^8.1.0",
+    "next": "^9.0.6",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
