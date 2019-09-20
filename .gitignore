@@ -64,6 +64,7 @@ typings/
 # next.js build output
 .next
 dist
+next-env.d.ts
 
 # nuxt.js build output
 .nuxt
@@ -83,3 +84,6 @@ dist
 # Blog posts build output
 content/*.json
 content/.dirstat.json
+
+# Lock files
+*.lock

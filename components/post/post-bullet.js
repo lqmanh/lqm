@@ -6,14 +6,14 @@ export default (props) => {
     <article className='media'>
       <div className='media-left'>
         <figure className='image'>
-          <Link prefetch href={`/posts/${props.slug}`}>
+          <Link href='/posts/[slug]' as={`/posts/${props.slug}`}>
             <img src={headerImage} />
           </Link>
         </figure>
       </div>
       <div className='media-content'>
         <h6 className='subtitle is-6'>
-          <Link prefetch href={`/posts/${props.slug}`}>
+          <Link href='/posts/[slug]' as={`/posts/${props.slug}`}>
             <a>{title}</a>
           </Link>
         </h6>

@@ -10,7 +10,7 @@ const Intro = () => (
     </h5>
     <nav className='level is-mobile'>
       <div className='level-left'>
-        <Link prefetch href='/posts/day-khong-phai-blog-cong-nghe-dau'>
+        <Link href='/posts/day-khong-phai-blog-cong-nghe-dau'>
           <a className='level-item'>
             <ion-icon name='information-circle-outline' />
             &nbsp;About
@@ -18,12 +18,10 @@ const Intro = () => (
         </Link>
       </div>
       <div className='level-right'>
-        <Link prefetch href='https://github.com/lqmanh/lqm'>
-          <a className='level-item'>
-            <ion-icon name='logo-github' />
-            &nbsp;Github
-          </a>
-        </Link>
+        <a className='level-item' href='https://github.com/lqmanh/lqm'>
+          <ion-icon name='logo-github' />
+          &nbsp;Github
+        </a>
       </div>
     </nav>
   </section>

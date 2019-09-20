@@ -14,7 +14,7 @@ export default (props) => {
   return (
     <div className='level'>
       <div className='level-left'>
-        <div className='level-item'>{props.tags.length ? <TagList tags={props.tags} /> : null}</div>
+        <div className='level-item'>{props.tags && props.tags.length ? <TagList tags={props.tags} /> : null}</div>
       </div>
       <div className='level-right'>
         <div className='level-item'>
