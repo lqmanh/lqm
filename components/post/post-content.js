@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
-import axios from 'axios'
 import PostMeta from './post-meta'
 import Share from '../share'
 
@@ -24,17 +22,8 @@ const Album = (props) => (
 
 export default (props) => {
   const url = `${ORIGIN}/posts/${props.slug}`
-  const [content, setContent] = useState({})
+  const { content } = props
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data: content } = await axios.get(`/api/post?slug=${props.slug}`)
-      setContent(content)
-    }
-    fetchData()
-  }, [])
-
-  if (!Object.keys(content)) return null
   return (
     <>
       <Head>
