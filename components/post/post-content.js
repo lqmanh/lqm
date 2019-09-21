@@ -23,6 +23,8 @@ const Album = (props) => (
 export default (props) => {
   const url = `${ORIGIN}/posts/${props.slug}`
   const { content } = props
+  let ogImage = content.headerImage
+  if (!ogImage.startsWith('http')) ogImage = ORIGIN + ogImage
 
   return (
     <>
@@ -32,7 +34,7 @@ export default (props) => {
         <meta property='og:type' content='article' />
         <meta property='og:title' content={content.title} />
         <meta property='og:description' content={content.description} />
-        <meta property='og:image' content={`${ORIGIN}${content.headerImage}`} />
+        <meta property='og:image' content={ogImage} />
       </Head>
       {content.type === 'album' ? (
         <Album title={content.title} photoUrls={content.photoUrls} />
