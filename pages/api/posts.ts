@@ -4,7 +4,7 @@ import axios from 'axios'
 const FLICKR_API_KEY = '3aedad13c4053365a085f050c12f07b7'
 const FLICKR_USER_ID = '184521961@N05'
 
-const getPrimaryPhotoUrl = async (albumID) => {
+const getPrimaryPhotoUrl = async (albumID: string): Promise<string> => {
   const {
     data: {
       photoset: { photo }
