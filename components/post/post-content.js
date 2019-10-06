@@ -23,7 +23,7 @@ const Album = (props) => (
 export default (props) => {
   const url = `${ORIGIN}/posts/${props.slug}`
   const { content } = props
-  let ogImage = content.headerImage
+  let ogImage = content.headerImage || '/static/default.jpg'
   if (!ogImage.startsWith('http')) ogImage = ORIGIN + ogImage
 
   return (

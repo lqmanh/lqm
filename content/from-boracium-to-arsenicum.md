@@ -2,8 +2,8 @@
 title: From Boracium To Arsenicum
 description: Một vài ghi chép về Boracium, Silicium và Arsenicum.
 published: true
-publicationDate: 2019-08-19
-lastUpdatedDate:
+publicationDate: 2019-07-29
+lastUpdatedDate: 2019-08-19
 tags: [computer-science]
 ---
 
