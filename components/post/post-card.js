@@ -9,7 +9,7 @@ export default (props) => {
       {headerImage ? (
         <div className='card-image'>
           <figure className='image'>
-            <Link prefetch href={`/posts/${props.slug}`}>
+            <Link href='/posts/[slug]' as={`/posts/${props.slug}`}>
               <img src={headerImage} />
             </Link>
           </figure>
@@ -17,7 +17,7 @@ export default (props) => {
       ) : null}
       <div className='card-content'>
         <h5 className='title is-5'>
-          <Link prefetch href={`/posts/${props.slug}`}>
+          <Link href='/posts/[slug]' as={`/posts/${props.slug}`}>
             <a>{title}</a>
           </Link>
         </h5>
@@ -31,7 +31,7 @@ export default (props) => {
           border-top-left-radius: 0.5rem;
           border-top-right-radius: 0.5rem;
           cursor: pointer;
-          max-height: 50vh;
+          max-height: 60vh;
           object-fit: cover;
         }
       `}</style>
