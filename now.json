@@ -1,10 +1,5 @@
 {
   "version": 2,
   "alias": "lqm",
-  "scope": "lqmanh",
-  "builds": [
-    { "src": "package.json", "use": "@now/next" },
-    { "src": "static/**/*.png", "use": "@now/optipng" },
-    { "src": "static/**/*.jpg", "use": "@now/static" }
-  ]
+  "scope": "lqmanh"
 }
