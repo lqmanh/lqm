@@ -10,7 +10,10 @@
   },
   "main": "pages/index.js",
   "scripts": {
-    "clean": "rm -rf .next dist content/*.json content/.*.json",
+    "clean:build": "rm -r .next dist",
+    "clean:content": "rm -r content/*.json content/.*.json",
+    "clean:deps": "rm -r node_modules",
+    "clean": "yarn run clean:build && yarn run clean:content && yarn run clean:deps",
     "dev": "next",
     "build:content": "node content-builder.js",
     "build:app": "next build",
