@@ -33,7 +33,7 @@ const FeaturedPosts = ({ posts }) => {
 
 const LastUpdatedPosts = ({ posts }) => {
   posts.sort(lastUpdatedDate)
-  return <PostBullets title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 5)} />
+  return <PostBullets title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 4)} />
 }
 
 export { PinnedPosts, FeaturedPosts, LastUpdatedPosts }
