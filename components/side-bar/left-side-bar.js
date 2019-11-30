@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { PinnedPosts, FeaturedPosts, LastUpdatedPosts } from '../post/post-bullets'
+import { PinnedPosts, LastUpdatedPosts } from '../post/post-bullets'
 
 const Intro = () => (
   <section className='section'>
@@ -31,7 +31,6 @@ export default ({ posts }) => (
   <>
     <Intro />
     <PinnedPosts posts={posts} />
-    <FeaturedPosts posts={posts} />
     <LastUpdatedPosts posts={posts} />
   </>
 )

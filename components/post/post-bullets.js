@@ -26,14 +26,9 @@ const PinnedPosts = ({ posts }) => {
   return <PostBullets title='PINNED' iconName='bookmark' posts={posts} />
 }
 
-const FeaturedPosts = ({ posts }) => {
-  posts = posts.filter((post) => post.meta.featured)
-  return <PostBullets title='FEATURED' iconName='star' posts={posts} />
-}
-
 const LastUpdatedPosts = ({ posts }) => {
   posts.sort(lastUpdatedDate)
-  return <PostBullets title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 4)} />
+  return <PostBullets title='LAST UPDATED' iconName='calendar' posts={posts.slice(0, 5)} />
 }
 
-export { PinnedPosts, FeaturedPosts, LastUpdatedPosts }
+export { PinnedPosts, LastUpdatedPosts }
