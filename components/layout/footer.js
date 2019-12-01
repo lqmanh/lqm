@@ -2,9 +2,7 @@ export default () => (
   <footer className='footer'>
     <div className='content has-text-centered'>
       <p>
-        Copyright &copy; 2018&ndash;2019&nbsp;
-        <a href='https://cvitae.now.sh/'>Lương Quang Mạnh</a>
-        . All rights reserved.
+        Copyright &copy; 2018&ndash;2019 Lương Quang Mạnh. All rights reserved.
         <br />
         The source code is licensed under&nbsp;
         <a href='https://opensource.org/licenses/MIT'>MIT</a>. The website content is licensed under&nbsp;

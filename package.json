@@ -4,13 +4,16 @@
   "license": "MIT",
   "author": "Luong Quang Manh",
   "repository": "github:lqmanh/lqm",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "engines": {
     "node": ">=10.0.0"
   },
   "main": "pages/index.js",
   "scripts": {
-    "clean": "rm -rf .next dist content/*.json content/.*.json",
+    "clean:build": "rm -r .next dist",
+    "clean:content": "rm -r content/*.json content/.*.json",
+    "clean:deps": "rm -r node_modules",
+    "clean": "yarn run clean:build && yarn run clean:content && yarn run clean:deps",
     "dev": "next",
     "build:content": "node content-builder.js",
     "build:app": "next build",
