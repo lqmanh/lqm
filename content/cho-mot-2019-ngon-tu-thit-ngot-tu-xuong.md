@@ -6,7 +6,6 @@ published: true
 publicationDate: 2019-01-01
 lastUpdatedDate: 2019-05-03
 tags: [resolution]
-pinned: true
 ---
 
 # Cho Một 2019 Ngon Từ Thịt, Ngọt Từ Xương
@@ -23,8 +22,8 @@ Và đây, 2019 là năm đầu tiên mình chịu ngồi viết new year resolu
 
 1. Ưu tiên số một, thi TOEIC
 2. Hoàn thành khoá luận tốt nghiệp
-3. Tặng song thân phụ mẫu một món quà nhỏ bằng chính tiền do mình kiếm được
-4. Cấm trượt thêm môn nào _(có lẽ cái này mới là ưu tiên số một)_
+3. ~~Tặng song thân phụ mẫu một món quà nhỏ bằng chính tiền do mình kiếm được~~
+4. ~~Cấm trượt thêm môn nào _(có lẽ cái này mới là ưu tiên số một)_~~
 5. ~~Tìm người hợp tác phát triển [Spiderman](https://github.com/albert-team/spiderman). Ừm, có thể một dự án liên quan khác nữa?~~
 6. ~~Chăm viết blog xíu đi!~~
 
