@@ -10,6 +10,8 @@ pinned: true
 
 # Năm Nay Tôi Hăm Hai
 
+![Header Image](/static/nam-nay-toi-ham-hai.jpg)
+
 Tính đến nay mình đã viết blog được tròn một năm rồi đấy! Năm nay mình lại tiếp tục viết new year resolutions, nhưng thay vì là bản danh sách dài những việc cần làm, mình sẽ coi đây như một cơ hội để nhìn nhận lại chính mình, về những việc đã hoàn thành, về những điều còn dang dở, và cả về những kì vọng cho năm tiếp theo. Sau này, có thể nhìn lại bản thân đã trưởng thành ra sao trong suốt những năm qua chẳng phải thật tuyệt sao? Đặc biệt với một năm quan trọng như 2020 - năm mà _theo kế hoạch_, mình sẽ bị đá đít khỏi trường đại học để vào đời.
 
 Nào, ta sẽ cùng điểm lại tất cả những thành tích đáng tự hào trong 2019 vừa qua trước chứ nhỉ?
