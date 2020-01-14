@@ -9,7 +9,7 @@ const Post = (props) => {
   const { slug } = router.query
   return (
     <Layout top={<TopBar />}>
-      <section className='section columns is-centered is-mobile'>
+      <section className='section columns is-centered is-mobile reading-mode'>
         <div className='column is-12-mobile is-10-tablet is-8-desktop is-6-widescreen'>
           <PostContent slug={slug} content={props.content} />
         </div>

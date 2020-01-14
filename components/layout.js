@@ -1,8 +1,10 @@
-export default () => (
+import '../styles/index.scss'
+
+const Footer = () => (
   <footer className='footer'>
     <div className='content has-text-centered'>
       <p>
-        Copyright &copy; 2018&ndash;2019 Lương Quang Mạnh. All rights reserved.
+        Copyright &copy; 2018&ndash;2020 Lương Quang Mạnh. All rights reserved.
         <br />
         The source code is licensed under&nbsp;
         <a href='https://opensource.org/licenses/MIT'>MIT</a>. The website content is licensed under&nbsp;
@@ -14,3 +16,21 @@ export default () => (
     </div>
   </footer>
 )
+
+const Layout = (props) => (
+  <>
+    {props.top}
+    <div className='columns'>
+      {props.left && <div className='column is-4-tablet is-3-widescreen sidebar'>{props.left}</div>}
+      <div className='column'>{props.children}</div>
+    </div>
+    <Footer />
+    <style jsx>{`
+      .columns {
+        margin-bottom: 0;
+      }
+    `}</style>
+  </>
+)
+
+export default Layout

@@ -4,9 +4,10 @@ import PostMeta from './post-meta'
 
 export default (props) => {
   const { title, description, headerImage, publicationDate, lastUpdatedDate, tags } = props.meta
+
   return (
     <div className='card'>
-      {headerImage ? (
+      {headerImage && (
         <div className='card-image'>
           <figure className='image'>
             <Link href='/posts/[slug]' as={`/posts/${props.slug}`}>
@@ -14,7 +15,7 @@ export default (props) => {
             </Link>
           </figure>
         </div>
-      ) : null}
+      )}
       <div className='card-content'>
         <h5 className='title is-5'>
           <Link href='/posts/[slug]' as={`/posts/${props.slug}`}>

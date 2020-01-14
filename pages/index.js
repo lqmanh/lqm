@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import axios from 'axios'
 import Layout from '../components/layout'
-import LeftSideBar from '../components/side-bar/left-side-bar'
+import LeftSideBar from '../components/side-bars/left-side-bar'
 import PostCards from '../components/post/post-cards'
+import PageButtons from '../components/page-buttons'
 
 const Index = (props) => {
   const { posts } = props
@@ -19,6 +20,7 @@ const Index = (props) => {
             </div>
           </div>
         </section>
+        <PageButtons />
       </Layout>
     </>
   )
