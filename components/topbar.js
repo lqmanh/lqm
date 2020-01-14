@@ -34,5 +34,13 @@ export default () => (
         </Link>
       </div>
     </div>
+    <style jsx>{`
+      .navbar-brand > .navbar-item:first-child {
+        padding-left: 1rem;
+      }
+      .navbar-end > .navbar-item:last-child {
+        padding-right: 1rem;
+      }
+    `}</style>
   </nav>
 )
