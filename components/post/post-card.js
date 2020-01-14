@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 import PostMeta from './post-meta'
 
 export default (props) => {

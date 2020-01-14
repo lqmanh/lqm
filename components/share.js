@@ -6,24 +6,29 @@ export default (props) => (
       <ion-icon name='share' />
       &nbsp;Share:
     </span>
-    <div className='share-button'>
+    <span>
       <FacebookShareButton url={props.url}>
         <FacebookIcon size={24} round={true} />
       </FacebookShareButton>
-    </div>
-    <div className='share-button'>
+    </span>
+    <span>
       <TwitterShareButton url={props.url}>
         <TwitterIcon size={24} round={true} />
       </TwitterShareButton>
-    </div>
+    </span>
     <style jsx>{`
       align-items: center;
       :nth-child(n) {
         display: inline-flex;
-        vertical-align: middle;
       }
       :not(:last-child) {
         margin-right: 0.5rem;
+      }
+      span:not(:first-child) {
+        cursor: pointer;
+      }
+      span:not(:first-child):hover {
+        opacity: 0.85;
       }
     `}</style>
   </div>

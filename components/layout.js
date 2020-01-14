@@ -1,4 +1,7 @@
+import dynamic from 'next/dynamic'
 import '../styles/index.scss'
+
+const DynamicPageButtonBar = dynamic(() => import('../components/page-buttons'), { ssr: true })
 
 const Footer = () => (
   <footer className='footer'>
@@ -19,6 +22,7 @@ const Footer = () => (
 
 const Layout = (props) => (
   <>
+    <DynamicPageButtonBar />
     {props.top}
     <div className='columns'>
       {props.left && <div className='column is-4-tablet is-3-widescreen sidebar'>{props.left}</div>}
