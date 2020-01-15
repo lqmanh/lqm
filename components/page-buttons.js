@@ -45,26 +45,14 @@ const PageButtons = () => (
     <style jsx>{`
       div {
         flex-direction: column;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 1;
         border-radius: 0.5rem;
       }
     `}</style>
   </div>
 )
 
-const PageButtonBar = () => (
-  <section className='is-flex'>
-    <PageButtons />
-    <style jsx>{`
-      section {
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        position: fixed;
-        right: 1rem;
-        z-index: 1;
-      }
-    `}</style>
-  </section>
-)
-
-export default PageButtonBar
+export default PageButtons
