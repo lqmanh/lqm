@@ -3,7 +3,7 @@ title: SNMP - What I Know
 description: Một vài ghi chép về Giao thức Quản lý Mạng Đơn giản - Simple Network Management Protocol (SNMP), cho một dự án cá nhân ngắn hạn về quản lý tài nguyên hệ thống mạng.
 published: true
 publicationDate: 2019-01-18
-lastUpdatedDate: 2019-07-29
+lastUpdatedDate: 2020-02-02
 tags: [computer-science, wik]
 ---
 
@@ -73,7 +73,7 @@ Các phương thức chính của SNMP
 ### Giới thiệu
 
 - Là một bộ ứng dụng hỗ trợ việc cài đặt _(implement)_ và sử dụng giao thức SNMP.
-- Sử dụng cả IPv4 và IPv6.
+- Hỗ trợ cả IPv4 và IPv6.
 - Hỗ trợ cả 3 phiên bản giao thức SNMP.
 - Hỗ trợ cả Windows và các hệ điều hành Unix-based như Linux và MacOS. Tuy nhiên, một số tính năng có thể khác nhau trên mỗi nền tảng.
 
@@ -84,6 +84,7 @@ Các phương thức chính của SNMP
    - Thay đổi thông số của agents: `snmpset`.
    - Truy vấn những thông số cố định của agents: `snmpdf`, `snmpnetstat`, `snmpstatus`.
    - Trình duyệt MIB: `snmptranslate`.
+   - Hỗ trợ cấu hình: `snmpconf`, `net-snmp-config`, `net-snmp-create-v3-user`.
 2. **Trình duyệt MIB `tkmib`**
    - Là ứng dụng giao diện đồ hoạ.
 3. **Daemon `snmptrapd`**
@@ -94,13 +95,11 @@ Các phương thức chính của SNMP
 5. **Thư viện hỗ trợ phát triển ứng dụng SNMP**
    - Hỗ trợ ngôn ngữ C và Perl.
 
-### Tuỳ chỉnh _(Configuration)_
+### Cấu hình _(Configuration)_
 
-Các tuỳ chỉnh cho Net-SNMP có thể được lưu trữ trong:
+Nơi lưu trữ files cấu hình của Net-SNMP có thể khác nhau giữa các hệ điều hành và bản phân phối _(distribution/distro)_. Với Arch-based distros, chúng thường được tổ chức như sau:
 
-1. `~/.snmp/snmpd.conf`: Chỉ cho một người dùng nhất định và có mức độ ưu tiên cao nhất.
+1. `$HOME/.snmp/snmpd.conf`: Chỉ cho một người dùng nhất định và có mức ưu tiên cao nhất.
 2. `/usr/share/snmp/snmpd.conf`: Cho tất cả người dùng trong hệ thống.
 3. `/etc/snmp/snmpd.conf`: Thường chỉ cho phiên bản v1 và v2c.
-4. `/var/net-snmp/snmpd.conf`: Được sinh ra bởi `snmpd` và bị ghi đè mỗi khi `snmpd` khởi động. Vì vậy, không được tự ý lưu tuỳ chỉnh vào đây, trừ _"createUser" tokens_.
-
-`snmpconf` là một ứng dụng CLI có sẵn hỗ trợ việc sinh ra file tuỳ chỉnh cho `snmpd`.
+4. `/var/net-snmp/snmpd.conf`: Được sinh ra bởi `snmpd` và bị ghi đè mỗi khi `snmpd` khởi động. Vì vậy, người dùng không được tự ý lưu cấu hình vào đây, trừ _"createUser" tokens_.
