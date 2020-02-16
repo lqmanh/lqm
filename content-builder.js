@@ -2,8 +2,10 @@ const fs = require('fs').promises
 const path = require('path')
 const { StatWriter } = require('directory-stat')
 const { StatCollector } = require('directory-stat/stat-collectors')
-const Converter = require('showdown').Converter
+const { Converter } = require('showdown')
 const fm = require('front-matter')
+const highlight = require('showdown-highlight')
+const footnotes = require('showdown-footnotes')
 
 const getBodyHtml = (body) => {
   const converter = new Converter({
@@ -19,7 +21,8 @@ const getBodyHtml = (body) => {
     simpleLineBreaks: true,
     requireSpaceBeforeHeadingText: true,
     openLinksInNewWindow: true,
-    emoji: true
+    emoji: true,
+    extensions: [highlight, footnotes]
   })
   return converter.makeHtml(body)
 }
