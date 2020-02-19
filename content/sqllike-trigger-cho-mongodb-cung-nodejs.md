@@ -3,6 +3,7 @@ title: SQL-like Trigger Cho MongoDB Cùng Node.js
 description: Bắt đầu từ đâu nhỉ? À, phải rồi, mọi chuyện bắt đầu từ việc mình ghét Mongoose, chủ yếu vì cái API và mấy concepts SQL nửa mùa nó thêm vào - những thứ vốn không tồn tại. Không sao, đã có hàng auth node-mongodb-native đây! Nhưng mình sớm nhận ra hàng chính hãng cũng chẳng thể đáp ứng hoàn toàn nhu cầu bản thân. Một trong những tính năng hay hớm của các SQL DBMS mà MongoDB không hỗ trợ chính là trigger. Mình thực sự muốn MongoDB có một thứ tương tự vậy.
 published: true
 publicationDate: 2020-02-16
+lastUpdatedDate: 2020-02-19
 tags: [computer-science, nodejs, mongodb]
 ---
 
@@ -18,7 +19,7 @@ Rõ ràng, mình không phải là người đầu tiên và duy nhất đòi h�
 
 Một số giải pháp áp dụng 2 cơ chế trên:
 
-- Database trigger cho nền tảng [MongoDB Stitch][stitch]: sản phẩm thương mại
+- [MongoDB Stitch database trigger][stitch]: sản phẩm thương mại
 - [mongo-triggers][mongo-triggers]: ngừng phát triển
 
 Tuy nhiên, cả 2 hướng tiếp cận này đều tương đối phức tạp và khó _(đối với mình)_ làm cho ít rối rắm hơn được. Sản phẩm có sẵn thì chả cái nào ưng. Do đó, mình quyết đi tìm một giải pháp tự chế đơn giản và hiện đại (Mongoose cũng có trigger tự chế mà họ gọi là [middleware][mongoose-middleware]).
@@ -27,7 +28,7 @@ Tuy nhiên, cả 2 hướng tiếp cận này đều tương đối phức tạp
 
 Vậy là mình bắt đầu tìm cách thiết kế và cài đặt vào [Mongol][mongol] [^1].
 
-Bắt đầu từ hướng giải quyết, rằng làm sao mình có thể gắn before/after hook (mình xin phép từ giờ sẽ gọi trigger là hook - thuật ngữ được sử dụng trong Mongol) vào CRUD operations, đồng thời "không thay đổi API của driver gốc, không yêu cầu người dùng _phải_ làm gì nếu bản thân MongoDB không yêu cầu". Hoá ra cũng không quá khó khăn, nhờ tính "super" dynamic của JavaScript. Mục tiêu của chúng ta đơn giản là monkey-patch tất cả CRUD operation methods của node-mongodb-native như ví dụ dưới đây:
+Bắt đầu từ hướng giải quyết, rằng làm sao mình có thể gắn before/after hook (mình xin phép từ giờ sẽ gọi trigger là hook - thuật ngữ được sử dụng trong Mongol) vào CRUD operations. Hoá ra cũng không quá khó khăn, nhờ tính "super" dynamic của JavaScript. Mục tiêu của chúng ta đơn giản là monkey-patch tất cả CRUD operation methods của node-mongodb-native như ví dụ dưới đây:
 
 ```js
 const originalFn = collection.insertOne
@@ -49,14 +50,16 @@ collection.insertOne = async (...args) => {
 const originalFn = collection.insertOne.bind(collection)
 ```
 
-Chưa xong, công cuộc thiết kế API cho tính năng này mới là điều khiến mình trăn trở nhất. Sau khi tham khảo một vài nguồn, kể cả Mongoose, cuối cùng mình cũng chốt hạ được như trong [API docs][mongol-docs-database-hook] của Mongol hiện nay. Dù sao, đây cũng chỉ là tài liệu tham khảo, để hiểu rõ hơn cách sử dụng, chúng ta cùng chuyển sang phần kế tiếp nhé!
+Chưa xong, công cuộc thiết kế API cho tính năng này mới là điều khiến mình trăn trở nhất. Sau khi tham khảo một vài nguồn, kể cả Mongoose, cuối cùng mình cũng chốt hạ được như trong [API docs][mongol-docs-database-hook] của Mongol hiện nay.
+
+Hiểu một cách đơn giản, _Mongol database hook là một object với 3 optional properties: "before", "after" và "error". Chúng có thể được gán vào handler functions tương ứng, và sẽ được tự động thực thi ngay trước, ngay sau và khi có lỗi phát sinh trong các CRUD operation methods của node-mongodb-native._
 
 ## Ví dụ
 
 Trong phần này, chúng ta sẽ cùng nhau cài đặt timestamp hook: tự động thêm/cập nhật `createdAt` và `updatedAt`. Thực tế, timestamp hook đã được tích hợp sẵn trong Mongol. Để sử dụng, các bạn chỉ cần import factory function `createTimestampHook`.
 
 ```js
-const { Mongol } = require('@albert-team/mongol') // version >= 0.5.0
+const { Mongol } = require('@albert-team/mongol') // version >= 0.6.0
 const { createTimestampHook } = require('@albert-team/mongol/builtins/hooks')
 
 const main = async () => {
@@ -68,54 +71,62 @@ const main = async () => {
 main()
 ```
 
-`createTimestampHook` còn hỗ trợ naming conventions khác nhau như camelCase và snake_case. Song, hôm nay chúng ta sẽ cài đặt một phiên bản đơn giản hơn. Lưu ý rằng đoạn code dưới đây chưa thể chạy được. Để phục vụ mục đích giải thích, mình sẽ tóm lược một số phần dễ hiểu.
+`createTimestampHook` còn hỗ trợ các naming conventions khác nhau như camelCase và snake_case. Song, hôm nay chúng ta sẽ cài đặt một phiên bản đơn giản hơn.
+
+_Lưu ý rằng đoạn code dưới đây chưa thể chạy được. Để phục vụ mục đích giải thích, mình xin tóm lược một số phần dễ hiểu._
+
+Trước hết, chúng ta cùng lướt qua một vài thành phần chính (có lẽ bạn sẽ không cần tới mọi thứ liệt kê dưới đây đâu):
 
 ```js
-const INSERT_OPERATIONS = new Set(['insertMany', 'insertOne'])
-const UPDATE_OPERATIONS = new Set(['findOneAndUpdate', 'updateMany', 'updateOne'])
-const REPLACE_OPERATIONS = new Set(['findOneAndReplace', 'replaceOne'])
-const DELETE_OPERATIONS = new Set(['deleteMany', 'deleteOne', 'findOneAndDelete'])
-
+// a database hook should have at least one of "before", "after" and "error" handlers
 const timestampHook = {
-  // context is hook context
-  // rawArgs are arguments passed to CRUD operation methods, as an array
+  // context - hook context
+  // rawArgs - raw arguments passed to CRUD operation methods, as an array
   before: (context, rawArgs) => {
-    // operation is one of CRUD operation methods
-    // event is one of 'before', 'during', 'after' ('during' may only be useful in 'error' handler)
-    // arguments is parsed arguments passed to CRUD operation methods, as an object
-    const { operation: op, event, arguments: parsedArgs } = context
+    // operation - one of CRUD operation methods
+    // op - essentially the same as operation, but more generic
+    // event - 'before', 'during' or 'after' ('during' may only be useful in 'error' handler)
+    // arguments - parsed arguments passed to CRUD operation methods, as an object
+    const { operation, op, event, arguments: parsedArgs } = context
     const { query, options } = parsedArgs
     let { documents, update, subOperations } = parsedArgs
 
-    if (INSERT_OPERATIONS.has(op)) documents = documents.map((doc) => withTimestamp(doc, 'createdAt'))
-    else if (UPDATE_OPERATIONS.has(op)) update = { ...update, $currentDate: { ['updatedAt']: true } }
-    else if (REPLACE_OPERATIONS.has(op)) documents = documents.map((doc) => withTimestamp(doc, 'updatedAt'))
-    else if (op === 'bulkWrite')
-      subOperations = subOperations.map((subOp) => {
-        if (subOp.insertOne) subOp.insertOne.document = withTimestamp(subOp.insertOne.document, 'createdAt')
-        else if (subOp.updateOne)
-          subOp.updateOne.update = {
-            ...subOp.updateOne.update,
-            $currentDate: { ['updatedAt']: true }
-          }
-        else if (subOp.updateMany)
-          subOp.updateMany.update = {
-            ...subOp.updateMany.update,
-            $currentDate: { ['updatedAt']: true }
-          }
-        else if (subOp.replaceOne)
-          subOp.replaceOne.replacement = withTimestamp(subOp.replaceOne.replacement, 'updatedAt')
-        return subOp
-      })
+    /* process things, see below... */
 
-    // return undefined/null, Mongol will pass the original args to the original CRUD operation method
-    // return an array like rawArgs, Mongol will pass it to the original CRUD operation method
-    // return an object like parsedArgs, Mongol will unparse then pass it to the original CRUD operation method
+    // return undefined/null, Mongol'll pass the original args to the original CRUD operation method
+    // return an array like rawArgs, Mongol'll pass it to the original CRUD operation method instead
+    // return an object like parsedArgs, Mongol'll unparse then pass it to the original CRUD operation method
     return { query, documents, update, subOperations, options }
   }
 }
 
 Mongol.attachDatabaseHook(coll, timestampHook)
+```
+
+Nếu vẫn mơ hồ, các bạn hãy tra cứu thêm API docs nha! Còn đây là phần thân của "before" handler trên:
+
+```js
+if (op === 'insert' || op === 'replace)
+  documents = documents.map((doc) => withTimestamp(doc, 'createdAt'))
+else if (op === 'update')
+  update = { ...update, $currentDate: { ['updatedAt']: true } }
+else if (op === 'bulkWrite')
+  subOperations = subOperations.map((subOp) => {
+    if (subOp.insertOne)
+      subOp.insertOne.document = withTimestamp(subOp.insertOne.document, 'createdAt')
+    else if (subOp.replaceOne)
+      subOp.replaceOne.replacement = withTimestamp(subOp.replaceOne.replacement, 'createdAt')
+    else if (subOp.updateOne)
+      subOp.updateOne.update = {
+        ...subOp.updateOne.update, $currentDate: { ['updatedAt']: true }
+      }
+    else if (subOp.updateMany)
+      subOp.updateMany.update = {
+        ...subOp.updateMany.update, $currentDate: { ['updatedAt']: true }
+      }
+
+    return subOp
+  })
 ```
 
 ## Hạn chế
@@ -146,4 +157,4 @@ Mongol: [Github][mongol] | [NPM][mongol-npm] | [API docs][mongol-docs]
 [mongoose-middleware]: https://mongoosejs.com/docs/middleware.html
 [node-mongodb-native]: http://mongodb.github.io/node-mongodb-native
 [oplog]: https://docs.mongodb.com/manual/core/replica-set-oplog
-[stitch]: https://www.mongodb.com/cloud/stitch
+[stitch]: https://docs.mongodb.com/stitch/triggers/database-triggers
