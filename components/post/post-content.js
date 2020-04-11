@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import PostMeta from './post-meta'
 import Share from '../share'
+import PostMeta from './post-meta'
 
 const ORIGIN = 'https://lqm.now.sh'
 
@@ -29,7 +29,7 @@ export default (props) => {
   return (
     <>
       <Head>
-        <title>{content.title} &ndash; LQM by Lương Quang Mạnh</title>
+        <title>{content.title} | LQM - Blog by Lương Quang Mạnh</title>
         <meta property='og:url' content={url} />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={content.title} />

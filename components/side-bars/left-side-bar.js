@@ -1,13 +1,12 @@
 import Link from 'next/link'
-
-import { PinnedPosts, LastUpdatedPosts } from '../post/post-bullets'
+import { LastUpdatedPosts, PinnedPosts } from '../post/post-bullets'
 
 const Intro = () => (
   <section className='section'>
-    <h1 className='title is-1'>LQM</h1>
+    <img src='/static/logo-colorful.svg' width='80' />
     <h5 className='subtitle is-5'>
       <em>
-        by&nbsp;
+        Blog by&nbsp;
         <Link href='https://cvitae.now.sh'>
           <a>Lương Quang Mạnh</a>
         </Link>

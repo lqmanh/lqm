@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 const analyticsMarkup = {
   __html: `
@@ -6,14 +6,16 @@ const analyticsMarkup = {
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-133189175-1');
-  `
+  `,
 }
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='vi' prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#'>
-        <Head></Head>
+        <Head>
+          <link rel='shortcut icon' type='image/svg+xml' href='/static/logo-monochrome.svg' />
+        </Head>
         <body>
           <Main />
           <NextScript />

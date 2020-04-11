@@ -1,15 +1,15 @@
-import Head from 'next/head'
 import axios from 'axios'
+import Head from 'next/head'
 import Layout from '../components/layout'
-import LeftSideBar from '../components/side-bars/left-side-bar'
 import PostCards from '../components/post/post-cards'
+import LeftSideBar from '../components/side-bars/left-side-bar'
 
 const Index = (props) => {
   const { posts } = props
   return (
     <>
       <Head>
-        <title>LQM by Lương Quang Mạnh</title>
+        <title>LQM - Blog by Lương Quang Mạnh</title>
       </Head>
       <Layout left={<LeftSideBar posts={posts} />}>
         <section className='section'>
