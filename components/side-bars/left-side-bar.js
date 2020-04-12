@@ -3,7 +3,7 @@ import { LastUpdatedPosts, PinnedPosts } from '../post/post-bullets'
 
 const Intro = () => (
   <section className='section'>
-    <img src='/static/logo-colorful.svg' width='80' />
+    <img src='/static/logo-iconic-fitted-colorful.svg' width='80' />
     <h5 className='subtitle is-5'>
       <em>
         Blog by&nbsp;

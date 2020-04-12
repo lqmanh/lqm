@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang='vi' prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#'>
         <Head>
-          <link rel='shortcut icon' type='image/svg+xml' href='/static/logo-monochrome.svg' />
+          <link rel='shortcut icon' type='image/svg+xml' href='/static/logo-iconic-square-monochrome.svg' />
           <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css' />
         </Head>
         <body>
