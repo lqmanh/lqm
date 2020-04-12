@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Luong Quang Manh",
   "repository": "github:lqmanh/lqm",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "engines": {
     "node": ">=10"
   },
