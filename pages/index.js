@@ -10,6 +10,7 @@ const Index = (props) => {
     <>
       <Head>
         <title>LQM - Blog by Lương Quang Mạnh</title>
+        <meta property='og:image' content='/static/logo-fulltext-spaced-colorful.png' />
       </Head>
       <Layout left={<LeftSideBar posts={posts} />}>
         <section className='section'>
