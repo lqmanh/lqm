@@ -4,10 +4,7 @@
   "license": "MIT",
   "author": "Luong Quang Manh",
   "repository": "github:lqmanh/lqm",
-  "version": "1.4.1",
-  "engines": {
-    "node": ">=10"
-  },
+  "version": "1.5.0",
   "main": "pages/index.js",
   "scripts": {
     "clean:app": "rm -r .next dist",
