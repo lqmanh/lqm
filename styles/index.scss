@@ -20,6 +20,10 @@ $navbar-height: 3rem;
 
 @import '../node_modules/bulma/bulma.sass';
 
+ion-icon {
+  --ionicon-stroke-width: 48px;
+}
+
 .card {
   border-radius: 0.5rem;
 }

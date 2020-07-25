@@ -7,9 +7,7 @@ const Intro = () => (
     <h5 className='subtitle is-5'>
       <em>
         Blog by&nbsp;
-        <Link href='https://cvitae.now.sh'>
-          <a>Lương Quang Mạnh</a>
-        </Link>
+        <a href='https://cvitae.now.sh'>Lương Quang Mạnh</a>
       </em>
     </h5>
     <nav className='level is-mobile'>
@@ -22,12 +20,10 @@ const Intro = () => (
         </Link>
       </div>
       <div className='level-right'>
-        <Link href='https://github.com/lqmanh/lqm'>
-          <a className='level-item'>
-            <ion-icon name='logo-github' />
-            &nbsp;Github
-          </a>
-        </Link>
+        <a className='level-item' href='https://github.com/lqmanh/lqm'>
+          <ion-icon name='logo-github' />
+          &nbsp;Github
+        </a>
       </div>
     </nav>
   </section>

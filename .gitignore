@@ -88,4 +88,4 @@ content/.dirstat.json
 # Lock files
 *.lock
 
-.now
+.vercel

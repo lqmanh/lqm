@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic'
-import '../styles/index.scss'
 
 const DynamicPageButtons = dynamic(() => import('../components/page-buttons'), { ssr: true })
 
